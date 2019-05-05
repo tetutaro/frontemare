@@ -1,0 +1,11 @@
+bash:
+    extension: .config
+    output: bash
+
+zsh:
+    extension: .config
+    output: zsh
+
+fish:
+    extension: .fish
+    output: fish

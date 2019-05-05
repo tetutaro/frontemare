@@ -1,0 +1,16 @@
+schemes: [
+    base16,
+    frontemare,
+    hybrid,
+    iceberg,
+    nord,
+    tomorrow,
+]
+applications: [
+    analysis,
+    fzf,
+    iterm2,
+    sample,
+    shell,
+    vim,
+]
