@@ -33,7 +33,7 @@ class FrontemareBuilder(object):
             assert(len(chex) == 6)
             rgb = dict()
             for j, t in enumerate('rgb'):
-                thex = chex[j:j + 2]
+                thex = chex[j * 2: (j + 1) * 2]
                 scheme['base%s-hex-%s' % (c, t)] = thex
                 scheme[
                     'base%s-hex-%s-pad' % (c, t)

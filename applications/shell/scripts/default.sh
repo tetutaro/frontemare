@@ -3,30 +3,30 @@
 # Base16 Shell template by Chris Kempson (http://chriskempson.com)
 # Default Dark scheme by Chris Kempson (http://chriskempson.com)
 
-color00="15/51/15" # Base 00 - Black
-color01="50/05/50" # Base 08 - Red
-color02="f4/4b/bf" # Base 0B - Green
-color03="90/0a/a9" # Base 0A - Yellow
-color04="aa/a7/75" # Base 0D - Blue
-color05="75/5b/b5" # Base 0E - Magenta
-color06="6a/a9/9f" # Base 0C - Cyan
-color07="aa/a7/75" # Base 05 - White
-color08="f4/4b/bf" # Base 03 - Bright Black
+color00="15/15/15" # Base 00 - Black
+color01="50/50/50" # Base 08 - Red
+color02="f4/bf/75" # Base 0B - Green
+color03="90/a9/59" # Base 0A - Yellow
+color04="aa/75/9f" # Base 0D - Blue
+color05="75/b5/aa" # Base 0E - Magenta
+color06="6a/9f/b5" # Base 0C - Cyan
+color07="88/5e/7f" # Base 05 - White
+color08="c3/99/5e" # Base 03 - Bright Black
 color09=$color01 # Base 08 - Bright Red
 color10=$color02 # Base 0B - Bright Green
 color11=$color03 # Base 0A - Bright Yellow
 color12=$color04 # Base 0D - Bright Blue
 color13=$color05 # Base 0E - Bright Magenta
 color14=$color06 # Base 0C - Bright Cyan
-color15="d0/0d/d0" # Base 07 - Bright White
-color16="ac/c4/41" # Base 09
-color17="f5/5f/f5" # Base 0F
-color18="ac/c4/41" # Base 01
-color19="90/0a/a9" # Base 02
-color20="6a/a9/9f" # Base 04
-color21="75/5b/b5" # Base 06
-color_foreground="aa/a7/75" # Base 05
-color_background="15/51/15" # Base 00
+color15="d0/d0/d0" # Base 07 - Bright White
+color16="ac/41/42" # Base 09
+color17="f5/f5/f5" # Base 0F
+color18="8a/34/35" # Base 01
+color19="73/87/47" # Base 02
+color20="55/7f/91" # Base 04
+color21="5e/91/88" # Base 06
+color_foreground="88/5e/7f" # Base 05
+color_background="15/15/15" # Base 00
 
 if [ -n "$TMUX" ]; then
   # Tell tmux to pass the escape sequences through
@@ -78,12 +78,12 @@ put_template 21 $color21
 # foreground / background / cursor color
 if [ -n "$ITERM_SESSION_ID" ]; then
   # iTerm2 proprietary escape codes
-  put_template_custom Pg aa759f # foreground
+  put_template_custom Pg 885e7f # foreground
   put_template_custom Ph 151515 # background
-  put_template_custom Pi aa759f # bold color
-  put_template_custom Pj 90a959 # selection color
-  put_template_custom Pk aa759f # selected text color
-  put_template_custom Pl aa759f # cursor
+  put_template_custom Pi 885e7f # bold color
+  put_template_custom Pj 738747 # selection color
+  put_template_custom Pk 885e7f # selected text color
+  put_template_custom Pl 885e7f # cursor
   put_template_custom Pm 151515 # cursor text
 else
   put_template_var 10 $color_foreground

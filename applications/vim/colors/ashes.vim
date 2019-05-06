@@ -17,18 +17,18 @@ endif
 " GUI color definitions
 let s:gui00        = "1c2023"
 let g:base16_gui00 = "1c2023"
-let s:gui01        = "c795ae"
-let g:base16_gui01 = "c795ae"
-let s:gui02        = "aec795"
-let g:base16_gui02 = "aec795"
-let s:gui03        = "c7ae95"
-let g:base16_gui03 = "c7ae95"
-let s:gui04        = "95aec7"
-let g:base16_gui04 = "95aec7"
-let s:gui05        = "ae95c7"
-let g:base16_gui05 = "ae95c7"
-let s:gui06        = "95c7ae"
-let g:base16_gui06 = "95c7ae"
+let s:gui01        = "9e768a"
+let g:base16_gui01 = "9e768a"
+let s:gui02        = "8a9e76"
+let g:base16_gui02 = "8a9e76"
+let s:gui03        = "9e8a76"
+let g:base16_gui03 = "9e8a76"
+let s:gui04        = "768a9e"
+let g:base16_gui04 = "768a9e"
+let s:gui05        = "8a769e"
+let g:base16_gui05 = "8a769e"
+let s:gui06        = "769e8a"
+let g:base16_gui06 = "769e8a"
 let s:gui07        = "c7ccd1"
 let g:base16_gui07 = "c7ccd1"
 let s:gui08        = "747c84"
@@ -106,8 +106,8 @@ if has("nvim")
   let g:terminal_color_4 =  "#ae95c7"
   let g:terminal_color_5 =  "#95c7ae"
   let g:terminal_color_6 =  "#95aec7"
-  let g:terminal_color_7 =  "#ae95c7"
-  let g:terminal_color_8 =  "#c7ae95"
+  let g:terminal_color_7 =  "#8a769e"
+  let g:terminal_color_8 =  "#9e8a76"
   let g:terminal_color_9 =  "#747c84"
   let g:terminal_color_10 = "#c7ae95"
   let g:terminal_color_11 = "#aec795"
@@ -130,8 +130,8 @@ elseif has('terminal')
         \ "#ae95c7",
         \ "#95c7ae",
         \ "#95aec7",
-        \ "#ae95c7",
-        \ "#c7ae95",
+        \ "#8a769e",
+        \ "#9e8a76",
         \ "#747c84",
         \ "#c7ae95",
         \ "#aec795",

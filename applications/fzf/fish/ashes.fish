@@ -2,12 +2,12 @@
 # Author: Jannik Siebert (https://github.com/janniks)
 
 set -l color00 '#1c2023'
-set -l color01 '#c795ae'
-set -l color02 '#aec795'
-set -l color03 '#c7ae95'
-set -l color04 '#95aec7'
-set -l color05 '#ae95c7'
-set -l color06 '#95c7ae'
+set -l color01 '#9e768a'
+set -l color02 '#8a9e76'
+set -l color03 '#9e8a76'
+set -l color04 '#768a9e'
+set -l color05 '#8a769e'
+set -l color06 '#769e8a'
 set -l color07 '#c7ccd1'
 set -l color08 '#747c84'
 set -l color09 '#c795ae'

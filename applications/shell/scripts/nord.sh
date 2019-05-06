@@ -3,30 +3,30 @@
 # Base16 Shell template by Chris Kempson (http://chriskempson.com)
 # Nord scheme by arcticicestudio (https://www.nordtheme.com/)
 
-color00="2e/e3/34" # Base 00 - Black
-color01="d8/8d/de" # Base 08 - Red
-color02="eb/bc/cb" # Base 0B - Green
-color03="a3/3b/be" # Base 0A - Yellow
-color04="b4/48/8e" # Base 0D - Blue
-color05="88/8c/c0" # Base 0E - Magenta
-color06="5e/e8/81" # Base 0C - Cyan
-color07="b4/48/8e" # Base 05 - White
-color08="eb/bc/cb" # Base 03 - Bright Black
+color00="2e/34/40" # Base 00 - Black
+color01="d8/de/e9" # Base 08 - Red
+color02="eb/cb/8b" # Base 0B - Green
+color03="a3/be/8c" # Base 0A - Yellow
+color04="b4/8e/ad" # Base 0D - Blue
+color05="88/c0/d0" # Base 0E - Magenta
+color06="5e/81/ac" # Base 0C - Cyan
+color07="b4/8e/ad" # Base 05 - White
+color08="eb/cb/8b" # Base 03 - Bright Black
 color09=$color01 # Base 08 - Bright Red
 color10=$color02 # Base 0B - Bright Green
 color11=$color03 # Base 0A - Bright Yellow
 color12=$color04 # Base 0D - Bright Blue
 color13=$color05 # Base 0E - Bright Magenta
 color14=$color06 # Base 0C - Bright Cyan
-color15="4c/c5/56" # Base 07 - Bright White
-color16="bf/f6/61" # Base 09
-color17="ec/ce/ef" # Base 0F
-color18="bf/f6/61" # Base 01
-color19="a3/3b/be" # Base 02
-color20="5e/e8/81" # Base 04
-color21="88/8c/c0" # Base 06
-color_foreground="b4/48/8e" # Base 05
-color_background="2e/e3/34" # Base 00
+color15="4c/56/6a" # Base 07 - Bright White
+color16="bf/61/6a" # Base 09
+color17="ec/ef/f4" # Base 0F
+color18="bf/61/6a" # Base 01
+color19="a3/be/8c" # Base 02
+color20="5e/81/ac" # Base 04
+color21="88/c0/d0" # Base 06
+color_foreground="b4/8e/ad" # Base 05
+color_background="2e/34/40" # Base 00
 
 if [ -n "$TMUX" ]; then
   # Tell tmux to pass the escape sequences through

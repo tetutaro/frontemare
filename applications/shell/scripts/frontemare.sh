@@ -4,28 +4,28 @@
 # frontemare scheme by tetutaro
 
 color00="00/00/00" # Base 00 - Black
-color01="8d/da/a6" # Base 08 - Red
-color02="d9/9a/a6" # Base 0B - Green
-color03="8d/dd/d9" # Base 0A - Yellow
-color04="a6/68/8d" # Base 0D - Blue
-color05="8d/dc/c0" # Base 0E - Magenta
-color06="8d/da/a6" # Base 0C - Cyan
-color07="75/56/63" # Base 05 - White
-color08="99/97/75" # Base 03 - Bright Black
+color01="8d/a6/d9" # Base 08 - Red
+color02="d9/a6/8d" # Base 0B - Green
+color03="8d/d9/d9" # Base 0A - Yellow
+color04="a6/8d/d9" # Base 0D - Blue
+color05="8d/c0/d9" # Base 0E - Magenta
+color06="8d/a6/d9" # Base 0C - Cyan
+color07="75/63/99" # Base 05 - White
+color08="99/75/63" # Base 03 - Bright Black
 color09=$color01 # Base 08 - Bright Red
 color10=$color02 # Base 0B - Bright Green
 color11=$color03 # Base 0A - Bright Yellow
 color12=$color04 # Base 0D - Bright Blue
 color13=$color05 # Base 0E - Bright Magenta
 color14=$color06 # Base 0C - Bright Cyan
-color15="63/37/75" # Base 07 - Bright White
-color16="d9/98/8d" # Base 09
-color17="d3/3d/d5" # Base 0F
-color18="99/96/63" # Base 01
-color19="63/39/99" # Base 02
-color20="63/37/75" # Base 04
-color21="63/38/87" # Base 06
-color_foreground="75/56/63" # Base 05
+color15="63/75/99" # Base 07 - Bright White
+color16="d9/8d/a6" # Base 09
+color17="d3/d5/d9" # Base 0F
+color18="99/63/75" # Base 01
+color19="63/99/99" # Base 02
+color20="63/75/99" # Base 04
+color21="63/87/99" # Base 06
+color_foreground="75/63/99" # Base 05
 color_background="00/00/00" # Base 00
 
 if [ -n "$TMUX" ]; then

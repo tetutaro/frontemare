@@ -4,28 +4,28 @@
 # Tomorrow Night Bright scheme by Chris Kempson (http://chriskempson.com)
 
 color00="00/00/00" # Base 00 - Black
-color01="96/69/98" # Base 08 - Red
-color02="e7/78/8c" # Base 0B - Green
-color03="b9/9c/ca" # Base 0A - Yellow
-color04="c3/39/97" # Base 0D - Blue
-color05="70/0c/c0" # Base 0E - Magenta
-color06="7a/aa/a6" # Base 0C - Cyan
-color07="c3/39/97" # Base 05 - White
-color08="e7/78/8c" # Base 03 - Bright Black
+color01="96/98/96" # Base 08 - Red
+color02="e7/8c/45" # Base 0B - Green
+color03="b9/ca/4a" # Base 0A - Yellow
+color04="c3/97/d8" # Base 0D - Blue
+color05="70/c0/b1" # Base 0E - Magenta
+color06="7a/a6/da" # Base 0C - Cyan
+color07="c3/97/d8" # Base 05 - White
+color08="e7/8c/45" # Base 03 - Bright Black
 color09=$color01 # Base 08 - Bright Red
 color10=$color02 # Base 0B - Bright Green
 color11=$color03 # Base 0A - Bright Yellow
 color12=$color04 # Base 0D - Bright Blue
 color13=$color05 # Base 0E - Bright Magenta
 color14=$color06 # Base 0C - Bright Cyan
-color15="42/24/42" # Base 07 - Bright White
-color16="d5/54/4e" # Base 09
-color17="ea/ae/ea" # Base 0F
-color18="d5/54/4e" # Base 01
-color19="b9/9c/ca" # Base 02
-color20="7a/aa/a6" # Base 04
-color21="70/0c/c0" # Base 06
-color_foreground="c3/39/97" # Base 05
+color15="42/42/42" # Base 07 - Bright White
+color16="d5/4e/53" # Base 09
+color17="ea/ea/ea" # Base 0F
+color18="d5/4e/53" # Base 01
+color19="b9/ca/4a" # Base 02
+color20="7a/a6/da" # Base 04
+color21="70/c0/b1" # Base 06
+color_foreground="c3/97/d8" # Base 05
 color_background="00/00/00" # Base 00
 
 if [ -n "$TMUX" ]; then

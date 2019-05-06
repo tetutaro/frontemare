@@ -2,12 +2,12 @@
 # Author: Chris Kempson (http://chriskempson.com)
 
 set -l color00 '#151515'
-set -l color01 '#ac4142'
-set -l color02 '#90a959'
-set -l color03 '#f4bf75'
-set -l color04 '#6a9fb5'
-set -l color05 '#aa759f'
-set -l color06 '#75b5aa'
+set -l color01 '#8a3435'
+set -l color02 '#738747'
+set -l color03 '#c3995e'
+set -l color04 '#557f91'
+set -l color05 '#885e7f'
+set -l color06 '#5e9188'
 set -l color07 '#d0d0d0'
 set -l color08 '#505050'
 set -l color09 '#ac4142'
