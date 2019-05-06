@@ -17,34 +17,34 @@ endif
 " GUI color definitions
 let s:gui00        = "1d1f21"
 let g:base16_gui00 = "1d1f21"
-let s:gui01        = "a54242"
-let g:base16_gui01 = "a54242"
-let s:gui02        = "8c9440"
-let g:base16_gui02 = "8c9440"
-let s:gui03        = "de935f"
-let g:base16_gui03 = "de935f"
-let s:gui04        = "5f819d"
-let g:base16_gui04 = "5f819d"
-let s:gui05        = "85678f"
-let g:base16_gui05 = "85678f"
-let s:gui06        = "5e8d87"
-let g:base16_gui06 = "5e8d87"
+let s:gui01        = "cc6666"
+let g:base16_gui01 = "cc6666"
+let s:gui02        = "b5bd68"
+let g:base16_gui02 = "b5bd68"
+let s:gui03        = "f0c674"
+let g:base16_gui03 = "f0c674"
+let s:gui04        = "81a2be"
+let g:base16_gui04 = "81a2be"
+let s:gui05        = "b294bb"
+let g:base16_gui05 = "b294bb"
+let s:gui06        = "8abeb7"
+let g:base16_gui06 = "8abeb7"
 let s:gui07        = "282a2e"
 let g:base16_gui07 = "282a2e"
 let s:gui08        = "373b41"
 let g:base16_gui08 = "373b41"
-let s:gui09        = "cc6666"
-let g:base16_gui09 = "cc6666"
-let s:gui0A        = "b5bd68"
-let g:base16_gui0A = "b5bd68"
-let s:gui0B        = "f0c674"
-let g:base16_gui0B = "f0c674"
-let s:gui0C        = "81a2be"
-let g:base16_gui0C = "81a2be"
-let s:gui0D        = "b294bb"
-let g:base16_gui0D = "b294bb"
-let s:gui0E        = "8abeb7"
-let g:base16_gui0E = "8abeb7"
+let s:gui09        = "a54242"
+let g:base16_gui09 = "a54242"
+let s:gui0A        = "8c9440"
+let g:base16_gui0A = "8c9440"
+let s:gui0B        = "de935f"
+let g:base16_gui0B = "de935f"
+let s:gui0C        = "5f819d"
+let g:base16_gui0C = "5f819d"
+let s:gui0D        = "85678f"
+let g:base16_gui0D = "85678f"
+let s:gui0E        = "5e8d87"
+let g:base16_gui0E = "5e8d87"
 let s:gui0F        = "c5c8c6"
 let g:base16_gui0F = "c5c8c6"
 
@@ -101,19 +101,19 @@ endif
 if has("nvim")
   let g:terminal_color_0 =  "#1d1f21"
   let g:terminal_color_1 =  "#373b41"
-  let g:terminal_color_2 =  "#f0c674"
-  let g:terminal_color_3 =  "#b5bd68"
-  let g:terminal_color_4 =  "#b294bb"
-  let g:terminal_color_5 =  "#8abeb7"
-  let g:terminal_color_6 =  "#81a2be"
-  let g:terminal_color_7 =  "#85678f"
-  let g:terminal_color_8 =  "#de935f"
+  let g:terminal_color_2 =  "#de935f"
+  let g:terminal_color_3 =  "#8c9440"
+  let g:terminal_color_4 =  "#85678f"
+  let g:terminal_color_5 =  "#5e8d87"
+  let g:terminal_color_6 =  "#5f819d"
+  let g:terminal_color_7 =  "#b294bb"
+  let g:terminal_color_8 =  "#f0c674"
   let g:terminal_color_9 =  "#373b41"
-  let g:terminal_color_10 = "#f0c674"
-  let g:terminal_color_11 = "#b5bd68"
-  let g:terminal_color_12 = "#b294bb"
-  let g:terminal_color_13 = "#8abeb7"
-  let g:terminal_color_14 = "#81a2be"
+  let g:terminal_color_10 = "#de935f"
+  let g:terminal_color_11 = "#8c9440"
+  let g:terminal_color_12 = "#85678f"
+  let g:terminal_color_13 = "#5e8d87"
+  let g:terminal_color_14 = "#5f819d"
   let g:terminal_color_15 = "#282a2e"
   let g:terminal_color_background = g:terminal_color_0
   let g:terminal_color_foreground = g:terminal_color_5
@@ -125,19 +125,19 @@ elseif has('terminal')
   let g:terminal_ansi_colors = [
         \ "#1d1f21",
         \ "#373b41",
-        \ "#f0c674",
-        \ "#b5bd68",
-        \ "#b294bb",
-        \ "#8abeb7",
-        \ "#81a2be",
-        \ "#85678f",
         \ "#de935f",
-        \ "#373b41",
-        \ "#f0c674",
-        \ "#b5bd68",
+        \ "#8c9440",
+        \ "#85678f",
+        \ "#5e8d87",
+        \ "#5f819d",
         \ "#b294bb",
-        \ "#8abeb7",
-        \ "#81a2be",
+        \ "#f0c674",
+        \ "#373b41",
+        \ "#de935f",
+        \ "#8c9440",
+        \ "#85678f",
+        \ "#5e8d87",
+        \ "#5f819d",
         \ "#282a2e",
         \ ]
 endif

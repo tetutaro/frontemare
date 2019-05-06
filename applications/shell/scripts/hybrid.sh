@@ -5,13 +5,13 @@
 
 color00="1d/d1/1f" # Base 00 - Black
 color01="37/73/3b" # Base 08 - Red
-color02="f0/0c/c6" # Base 0B - Green
-color03="b5/5b/bd" # Base 0A - Yellow
-color04="b2/29/94" # Base 0D - Blue
-color05="8a/ab/be" # Base 0E - Magenta
-color06="81/1a/a2" # Base 0C - Cyan
-color07="85/56/67" # Base 05 - White
-color08="de/e9/93" # Base 03 - Bright Black
+color02="de/e9/93" # Base 0B - Green
+color03="8c/c9/94" # Base 0A - Yellow
+color04="85/56/67" # Base 0D - Blue
+color05="5e/e8/8d" # Base 0E - Magenta
+color06="5f/f8/81" # Base 0C - Cyan
+color07="b2/29/94" # Base 05 - White
+color08="f0/0c/c6" # Base 03 - Bright Black
 color09=$color01 # Base 08 - Bright Red
 color10=$color02 # Base 0B - Bright Green
 color11=$color03 # Base 0A - Bright Yellow
@@ -19,13 +19,13 @@ color12=$color04 # Base 0D - Bright Blue
 color13=$color05 # Base 0E - Bright Magenta
 color14=$color06 # Base 0C - Bright Cyan
 color15="28/82/2a" # Base 07 - Bright White
-color16="cc/c6/66" # Base 09
+color16="a5/54/42" # Base 09
 color17="c5/5c/c8" # Base 0F
-color18="a5/54/42" # Base 01
-color19="8c/c9/94" # Base 02
-color20="5f/f8/81" # Base 04
-color21="5e/e8/8d" # Base 06
-color_foreground="85/56/67" # Base 05
+color18="cc/c6/66" # Base 01
+color19="b5/5b/bd" # Base 02
+color20="81/1a/a2" # Base 04
+color21="8a/ab/be" # Base 06
+color_foreground="b2/29/94" # Base 05
 color_background="1d/d1/1f" # Base 00
 
 if [ -n "$TMUX" ]; then
@@ -78,12 +78,12 @@ put_template 21 $color21
 # foreground / background / cursor color
 if [ -n "$ITERM_SESSION_ID" ]; then
   # iTerm2 proprietary escape codes
-  put_template_custom Pg 85678f # foreground
+  put_template_custom Pg b294bb # foreground
   put_template_custom Ph 1d1f21 # background
-  put_template_custom Pi 85678f # bold color
-  put_template_custom Pj 8c9440 # selection color
-  put_template_custom Pk 85678f # selected text color
-  put_template_custom Pl 85678f # cursor
+  put_template_custom Pi b294bb # bold color
+  put_template_custom Pj b5bd68 # selection color
+  put_template_custom Pk b294bb # selected text color
+  put_template_custom Pl b294bb # cursor
   put_template_custom Pm 1d1f21 # cursor text
 else
   put_template_var 10 $color_foreground

@@ -4,28 +4,28 @@
 # frontemare scheme by tetutaro
 
 color00="00/00/00" # Base 00 - Black
-color01="d9/98/8d" # Base 08 - Red
-color02="8d/dd/d9" # Base 0B - Green
-color03="d9/9a/a6" # Base 0A - Yellow
-color04="8d/da/a6" # Base 0D - Blue
-color05="a6/68/8d" # Base 0E - Magenta
-color06="8d/dc/c0" # Base 0C - Cyan
-color07="d3/3d/d5" # Base 05 - White
-color08="8d/da/a6" # Base 03 - Bright Black
+color01="8d/da/a6" # Base 08 - Red
+color02="d9/9a/a6" # Base 0B - Green
+color03="8d/dd/d9" # Base 0A - Yellow
+color04="a6/68/8d" # Base 0D - Blue
+color05="8d/dc/c0" # Base 0E - Magenta
+color06="8d/da/a6" # Base 0C - Cyan
+color07="75/56/63" # Base 05 - White
+color08="99/97/75" # Base 03 - Bright Black
 color09=$color01 # Base 08 - Bright Red
 color10=$color02 # Base 0B - Bright Green
 color11=$color03 # Base 0A - Bright Yellow
 color12=$color04 # Base 0D - Bright Blue
 color13=$color05 # Base 0E - Bright Magenta
 color14=$color06 # Base 0C - Bright Cyan
-color15="ff/ff/ff" # Base 07 - Bright White
-color16="ff/ff/ff" # Base 09
-color17="ff/ff/ff" # Base 0F
-color18="63/37/75" # Base 01
-color19="ff/ff/ff" # Base 02
-color20="ff/ff/ff" # Base 04
-color21="ff/ff/ff" # Base 06
-color_foreground="d3/3d/d5" # Base 05
+color15="63/37/75" # Base 07 - Bright White
+color16="d9/98/8d" # Base 09
+color17="d3/3d/d5" # Base 0F
+color18="99/96/63" # Base 01
+color19="63/39/99" # Base 02
+color20="63/37/75" # Base 04
+color21="63/38/87" # Base 06
+color_foreground="75/56/63" # Base 05
 color_background="00/00/00" # Base 00
 
 if [ -n "$TMUX" ]; then
@@ -78,12 +78,12 @@ put_template 21 $color21
 # foreground / background / cursor color
 if [ -n "$ITERM_SESSION_ID" ]; then
   # iTerm2 proprietary escape codes
-  put_template_custom Pg d3d5d9 # foreground
+  put_template_custom Pg 756399 # foreground
   put_template_custom Ph 000000 # background
-  put_template_custom Pi d3d5d9 # bold color
-  put_template_custom Pj ffffff # selection color
-  put_template_custom Pk d3d5d9 # selected text color
-  put_template_custom Pl d3d5d9 # cursor
+  put_template_custom Pi 756399 # bold color
+  put_template_custom Pj 639999 # selection color
+  put_template_custom Pk 756399 # selected text color
+  put_template_custom Pl 756399 # cursor
   put_template_custom Pm 000000 # cursor text
 else
   put_template_var 10 $color_foreground

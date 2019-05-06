@@ -17,36 +17,36 @@ endif
 " GUI color definitions
 let s:gui00        = "000000"
 let g:base16_gui00 = "000000"
-let s:gui01        = "637599"
-let g:base16_gui01 = "637599"
-let s:gui02        = "ffffff"
-let g:base16_gui02 = "ffffff"
-let s:gui03        = "8da6d9"
-let g:base16_gui03 = "8da6d9"
-let s:gui04        = "ffffff"
-let g:base16_gui04 = "ffffff"
-let s:gui05        = "d3d5d9"
-let g:base16_gui05 = "d3d5d9"
-let s:gui06        = "ffffff"
-let g:base16_gui06 = "ffffff"
-let s:gui07        = "ffffff"
-let g:base16_gui07 = "ffffff"
-let s:gui08        = "d98da6"
-let g:base16_gui08 = "d98da6"
-let s:gui09        = "ffffff"
-let g:base16_gui09 = "ffffff"
-let s:gui0A        = "d9a68d"
-let g:base16_gui0A = "d9a68d"
-let s:gui0B        = "8dd9d9"
-let g:base16_gui0B = "8dd9d9"
-let s:gui0C        = "8dc0d9"
-let g:base16_gui0C = "8dc0d9"
-let s:gui0D        = "8da6d9"
-let g:base16_gui0D = "8da6d9"
-let s:gui0E        = "a68dd9"
-let g:base16_gui0E = "a68dd9"
-let s:gui0F        = "ffffff"
-let g:base16_gui0F = "ffffff"
+let s:gui01        = "996375"
+let g:base16_gui01 = "996375"
+let s:gui02        = "639999"
+let g:base16_gui02 = "639999"
+let s:gui03        = "997563"
+let g:base16_gui03 = "997563"
+let s:gui04        = "637599"
+let g:base16_gui04 = "637599"
+let s:gui05        = "756399"
+let g:base16_gui05 = "756399"
+let s:gui06        = "638799"
+let g:base16_gui06 = "638799"
+let s:gui07        = "637599"
+let g:base16_gui07 = "637599"
+let s:gui08        = "8da6d9"
+let g:base16_gui08 = "8da6d9"
+let s:gui09        = "d98da6"
+let g:base16_gui09 = "d98da6"
+let s:gui0A        = "8dd9d9"
+let g:base16_gui0A = "8dd9d9"
+let s:gui0B        = "d9a68d"
+let g:base16_gui0B = "d9a68d"
+let s:gui0C        = "8da6d9"
+let g:base16_gui0C = "8da6d9"
+let s:gui0D        = "a68dd9"
+let g:base16_gui0D = "a68dd9"
+let s:gui0E        = "8dc0d9"
+let g:base16_gui0E = "8dc0d9"
+let s:gui0F        = "d3d5d9"
+let g:base16_gui0F = "d3d5d9"
 
 " Terminal color definitions
 let s:cterm00        = "00"
@@ -100,21 +100,21 @@ endif
 " Neovim terminal colours
 if has("nvim")
   let g:terminal_color_0 =  "#000000"
-  let g:terminal_color_1 =  "#d98da6"
-  let g:terminal_color_2 =  "#8dd9d9"
-  let g:terminal_color_3 =  "#d9a68d"
-  let g:terminal_color_4 =  "#8da6d9"
-  let g:terminal_color_5 =  "#a68dd9"
-  let g:terminal_color_6 =  "#8dc0d9"
-  let g:terminal_color_7 =  "#d3d5d9"
-  let g:terminal_color_8 =  "#8da6d9"
-  let g:terminal_color_9 =  "#d98da6"
-  let g:terminal_color_10 = "#8dd9d9"
-  let g:terminal_color_11 = "#d9a68d"
-  let g:terminal_color_12 = "#8da6d9"
-  let g:terminal_color_13 = "#a68dd9"
-  let g:terminal_color_14 = "#8dc0d9"
-  let g:terminal_color_15 = "#ffffff"
+  let g:terminal_color_1 =  "#8da6d9"
+  let g:terminal_color_2 =  "#d9a68d"
+  let g:terminal_color_3 =  "#8dd9d9"
+  let g:terminal_color_4 =  "#a68dd9"
+  let g:terminal_color_5 =  "#8dc0d9"
+  let g:terminal_color_6 =  "#8da6d9"
+  let g:terminal_color_7 =  "#756399"
+  let g:terminal_color_8 =  "#997563"
+  let g:terminal_color_9 =  "#8da6d9"
+  let g:terminal_color_10 = "#d9a68d"
+  let g:terminal_color_11 = "#8dd9d9"
+  let g:terminal_color_12 = "#a68dd9"
+  let g:terminal_color_13 = "#8dc0d9"
+  let g:terminal_color_14 = "#8da6d9"
+  let g:terminal_color_15 = "#637599"
   let g:terminal_color_background = g:terminal_color_0
   let g:terminal_color_foreground = g:terminal_color_5
   if &background == "light"
@@ -124,21 +124,21 @@ if has("nvim")
 elseif has('terminal')
   let g:terminal_ansi_colors = [
         \ "#000000",
-        \ "#d98da6",
-        \ "#8dd9d9",
-        \ "#d9a68d",
         \ "#8da6d9",
+        \ "#d9a68d",
+        \ "#8dd9d9",
         \ "#a68dd9",
         \ "#8dc0d9",
-        \ "#d3d5d9",
         \ "#8da6d9",
-        \ "#d98da6",
-        \ "#8dd9d9",
+        \ "#756399",
+        \ "#997563",
+        \ "#8da6d9",
         \ "#d9a68d",
-        \ "#8da6d9",
+        \ "#8dd9d9",
         \ "#a68dd9",
         \ "#8dc0d9",
-        \ "#ffffff",
+        \ "#8da6d9",
+        \ "#637599",
         \ ]
 endif
 
