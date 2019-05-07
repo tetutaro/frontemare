@@ -1,11 +1,11 @@
 bash:
-    extension: .config
+    extension: .fzf_color.bash
     output: bash
 
 zsh:
-    extension: .config
+    extension: .fzf_color.zsh
     output: zsh
 
 fish:
-    extension: .fish
+    extension: .fzf_color.fish
     output: fish
