@@ -19,7 +19,8 @@ set -l color0E '#89b8c2'
 set -l color0F '#c6c8d1'
 
 set -U FZF_DEFAULT_OPTS "
-  --color=bg+:$color01,bg:$color00,spinner:$color0C,hl:$color0D
-  --color=fg:$color04,header:$color0D,info:$color0A,pointer:$color0C
-  --color=marker:$color0C,fg+:$color06,prompt:$color0A,hl+:$color0D
+  --color=fg:$color0F,bg:$color00,hl:$color0C
+  --color=fg+:$color0F,bg+:$color06,gutter:$color00,hl+:$color0C
+  --color=prompt:$color0C,pointer:$color0A,marker:$color0A
+  --color=spinner:$color09,info:$color0B
 "

@@ -21,10 +21,10 @@ local color0E='#5e8d87'
 local color0F='#c5c8c6'
 
 export FZF_DEFAULT_OPTS="
-  --color=fg:$color0F,bg:$color00,hl:$color0E
-  --color=fg+:$color0F,bg+:$color07,gutter:$color07,hl+:$color0E
-  --color=prompt:$color0C,pointer:$color0C,marker:$color0C
-  --color=spinner:$color09,header:$color0A
+  --color=fg:$color0F,bg:$color00,hl:$color0C
+  --color=fg+:$color0F,bg+:$color06,gutter:$color00,hl+:$color0C
+  --color=prompt:$color0C,pointer:$color0A,marker:$color0A
+  --color=spinner:$color09,info:$color0B
 "
 
 }
