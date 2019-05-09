@@ -1,32 +1,22 @@
 #!/bin/sh
-# base16-shell (https://github.com/chriskempson/base16-shell)
-# Base16 Shell template by Chris Kempson (http://chriskempson.com)
 # Ashes scheme by Jannik Siebert (https://github.com/janniks)
 
-color00="1c/20/23" # Base 00 - Black
-color01="74/7c/84" # Base 08 - Red
-color02="c7/ae/95" # Base 0B - Green
-color03="ae/c7/95" # Base 0A - Yellow
-color04="ae/95/c7" # Base 0D - Blue
-color05="95/c7/ae" # Base 0E - Magenta
-color06="95/ae/c7" # Base 0C - Cyan
-color07="8a/76/9e" # Base 05 - White
-color08="9e/8a/76" # Base 03 - Bright Black
-color09=$color01 # Base 08 - Bright Red
-color10=$color02 # Base 0B - Bright Green
-color11=$color03 # Base 0A - Bright Yellow
-color12=$color04 # Base 0D - Bright Blue
-color13=$color05 # Base 0E - Bright Magenta
-color14=$color06 # Base 0C - Bright Cyan
-color15="c7/cc/d1" # Base 07 - Bright White
-color16="c7/95/ae" # Base 09
-color17="f3/f4/f5" # Base 0F
-color18="9e/76/8a" # Base 01
-color19="8a/9e/76" # Base 02
-color20="76/8a/9e" # Base 04
-color21="76/9e/8a" # Base 06
-color_foreground="8a/76/9e" # Base 05
-color_background="1c/20/23" # Base 00
+color00="1c/20/23"
+color01="9e/76/8a"
+color02="8a/9e/76"
+color03="9e/8a/76"
+color04="76/8a/9e"
+color05="8a/76/9e"
+color06="76/9e/8a"
+color07="c7/cc/d1"
+color08="74/7c/84"
+color09="c7/95/ae"
+color10="ae/c7/95"
+color11="c7/ae/95"
+color12="95/ae/c7"
+color13="ae/95/c7"
+color14="95/c7/ae"
+color15="f3/f4/f5"
 
 if [ -n "$TMUX" ]; then
   # Tell tmux to pass the escape sequences through
@@ -50,14 +40,14 @@ else
 fi
 
 # 16 color space
-put_template 0  $color00
-put_template 1  $color01
-put_template 2  $color02
-put_template 3  $color03
-put_template 4  $color04
-put_template 5  $color05
-put_template 6  $color06
-put_template 7  $color07
+put_template 0  $color08
+put_template 1  $color09
+put_template 2  $color10
+put_template 3  $color11
+put_template 4  $color12
+put_template 5  $color13
+put_template 6  $color14
+put_template 7  $color15
 put_template 8  $color08
 put_template 9  $color09
 put_template 10 $color10
@@ -68,30 +58,29 @@ put_template 14 $color14
 put_template 15 $color15
 
 # 256 color space
-put_template 16 $color16
-put_template 17 $color17
-put_template 18 $color18
-put_template 19 $color19
-put_template 20 $color20
-put_template 21 $color21
+put_template 16 $color01
+put_template 17 $color02
+put_template 18 $color03
+put_template 19 $color04
+put_template 20 $color05
+put_template 21 $color06
+put_template 22 $color07
 
 # foreground / background / cursor color
 if [ -n "$ITERM_SESSION_ID" ]; then
   # iTerm2 proprietary escape codes
-  put_template_custom Pg 8a769e # foreground
+  put_template_custom Pg f3f4f5 # foreground
   put_template_custom Ph 1c2023 # background
-  put_template_custom Pi 8a769e # bold color
-  put_template_custom Pj 8a9e76 # selection color
-  put_template_custom Pk 8a769e # selected text color
-  put_template_custom Pl 8a769e # cursor
+  put_template_custom Pi f3f4f5 # bold color
+  put_template_custom Pj c7ccd1 # selection color
+  put_template_custom Pk f3f4f5 # selected text color
+  put_template_custom Pl f3f4f5 # cursor
   put_template_custom Pm 1c2023 # cursor text
 else
-  put_template_var 10 $color_foreground
-  if [ "$BASE16_SHELL_SET_BACKGROUND" != false ]; then
-    put_template_var 11 $color_background
-    if [ "${TERM%%-*}" = "rxvt" ]; then
-      put_template_var 708 $color_background # internal border (rxvt)
-    fi
+  put_template_var 10 $color15 # foreground
+  put_template_var 11 $color00 # background
+  if [ "${TERM%%-*}" = "rxvt" ]; then
+    put_template_var 708 $color00 # internal border (rxvt)
   fi
   put_template_custom 12 ";7" # cursor (reverse video)
 fi

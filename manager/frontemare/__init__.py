@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+# -*- coding:utf-8 -*-
 from typing import List, Optional
 import argparse
 import curses
@@ -9,7 +11,46 @@ import pkg_resources
 FRONTEMARE_INSTALL_DIR = '~/.config/frontemare-shell'
 FRONTEMARE_SCRIPT_PATH = '~/.frontemare.sh'
 SHELL = os.environ['SHELL']
-NUM_COLORS = 22
+
+COLOR_NAMES = [
+    ' regular grey    ',
+    ' regular red     ',
+    ' regular lime    ',
+    ' regular yellow  ',
+    ' regular blue    ',
+    ' regular magenta ',
+    ' regular cyan    ',
+    ' regular white   ',
+    '    bold grey    ',
+    '    bold red     ',
+    '    bold lime    ',
+    '    bold yellow  ',
+    '    bold blue    ',
+    '    bold magenta ',
+    '    bold cyan    ',
+    '    bold white   ',
+    ' bgcolor maroon  ',
+    ' bgcolor green   ',
+    ' bgcolor olive   ',
+    ' bgcolor navy    ',
+    ' bgcolor purple  ',
+    ' bgcolor teal    ',
+    ' bgcolor silver  ',
+]
+NUM_COLORS = len(COLOR_NAMES)
+
+
+class Theme(object):
+    def __init__(self, path):
+        self.path = path
+        filename = os.path.split(self.path)[1]
+        self.name = os.path.splitext(filename)[0]
+
+    def run_script(self):
+        subprocess.Popen([SHELL, self.path])
+
+    def setup(self):
+        pass
 
 
 def get_themes() -> List[Theme]:
@@ -37,40 +78,26 @@ def get_default_theme() -> Optional[Theme]:
     return Theme(script_path)
 
 
-class Theme(object):
-    def __init__(self, path):
-        self.path = path
-        filename = os.path.split(self.path)[1]
-        self.name = os.path.splitext(filename)[0]
-
-    def run_script(self):
-        subprocess.Popen([SHELL, self.path])
-
-    def setup(self):
-        subprocess.Popen([SHELL, '-ic', 'base16_{}'.format(self.name)])
-
-
 class PreviewWindow(object):
-    def __init__(self, lines, cols, *args, **kwargs):
+    def __init__(self, lines: int, cols: int, *args, **kwargs):
         self.lines = lines
         self.cols = cols
         self.window = curses.newwin(lines, cols, *args, **kwargs)
 
     def render(self):
-        # make color pairs
-        curses.init_pair(0, 0, -1)
-        # header
-        for i in range(8):
-            curses.init_pair(0, i + 8, -1)
-            text = ' {:02X} '.format(i + 8)
-            self.window.addstr(0, i * 4, text, curses.color_pair(i))
-        for i in range(8):
-            text = 'color{:02d} '.format(i)
-            spaces = self.cols - len(text) - 1
-
-            self.window.addstr(i + 1, len(text), ' ' * spaces,
-                               curses.color_pair(i) + curses.A_REVERSE)
-            self.window.addstr(i + 1, 0, text, curses.color_pair(i))
+        for i in range(NUM_COLORS):
+            if i < 16:
+                curses.init_pair(i, i, -1)
+            else:
+                curses.init_pair(i, -1, i)
+            text = COLOR_NAMES[i]
+            attr = curses.color_pair(i)
+            rev_attr = attr + curses.A_REVERSE
+            if 7 < i and i < 16:
+                attr += curses.A_BOLD
+                rev_attr += curses.A_BOLD
+            self.window.addstr(i, len(text), text, rev_attr)
+            self.window.addstr(i, 0, text, attr)
         self.window.refresh()
 
 
@@ -132,8 +159,8 @@ def run_curses_app():
     curses.noecho()
     default_theme = get_default_theme()
     themes = {s.name: s for s in get_themes()}
-    scroll_list_cols = 25
-    preview_cols = 42
+    scroll_list_cols = 35
+    preview_cols = 35
     total_cols = scroll_list_cols + preview_cols
     scroll_list_win = ScrollListWindow(NUM_COLORS, scroll_list_cols)
     preview_win = PreviewWindow(NUM_COLORS, preview_cols, 0, scroll_list_cols)
