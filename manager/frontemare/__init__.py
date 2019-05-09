@@ -1,3 +1,4 @@
+from typing import List, Optional
 import argparse
 import curses
 import os
@@ -5,29 +6,47 @@ import subprocess
 
 import pkg_resources
 
-CURRENT_THEME = os.readlink(os.path.expanduser('~/.base16_theme'))
-BASE16_SCRIPTS_DIR = os.path.split(CURRENT_THEME)[0]
-
+FRONTEMARE_INSTALL_DIR = '~/.config/frontemare-shell'
+FRONTEMARE_SCRIPT_PATH = '~/.frontemare.sh'
 SHELL = os.environ['SHELL']
-
 NUM_COLORS = 22
 
 
-def get_themes(scripts_dir):
-    return [Theme(os.path.join(scripts_dir, f))
-            for f in sorted(os.listdir(scripts_dir))]
+def get_themes() -> List[Theme]:
+    if not os.path.islink(
+        os.path.expanduser(FRONTEMARE_INSTALL_DIR)
+    ):
+        raise ValueError("frontemare is not installed")
+    scripts_dir = os.readlink(
+        os.path.expanduser(FRONTEMARE_INSTALL_DIR)
+    )
+    return [
+        Theme(os.path.join(scripts_dir, f))
+        for f in sorted(os.listdir(scripts_dir))
+    ]
+
+
+def get_default_theme() -> Optional[Theme]:
+    if not os.path.islink(
+        os.path.expanduser(FRONTEMARE_SCRIPT_PATH)
+    ):
+        return None
+    script_path = os.readlink(
+        os.path.expanduser(FRONTEMARE_SCRIPT_PATH)
+    )
+    return Theme(script_path)
 
 
 class Theme(object):
     def __init__(self, path):
         self.path = path
         filename = os.path.split(self.path)[1]
-        self.name = filename.replace('base16-', '', 1)[:-3]
+        self.name = os.path.splitext(filename)[0]
 
     def run_script(self):
         subprocess.Popen([SHELL, self.path])
 
-    def run_alias(self):
+    def setup(self):
         subprocess.Popen([SHELL, '-ic', 'base16_{}'.format(self.name)])
 
 
@@ -38,15 +57,20 @@ class PreviewWindow(object):
         self.window = curses.newwin(lines, cols, *args, **kwargs)
 
     def render(self):
-        for i in range(NUM_COLORS):
-            curses.init_pair(i, i, -1)
+        # make color pairs
+        curses.init_pair(0, 0, -1)
+        # header
+        for i in range(8):
+            curses.init_pair(0, i + 8, -1)
+            text = ' {:02X} '.format(i + 8)
+            self.window.addstr(0, i * 4, text, curses.color_pair(i))
+        for i in range(8):
             text = 'color{:02d} '.format(i)
             spaces = self.cols - len(text) - 1
 
-            self.window.addstr(i, len(text), spaces*' ',
+            self.window.addstr(i + 1, len(text), ' ' * spaces,
                                curses.color_pair(i) + curses.A_REVERSE)
-            self.window.addstr(i, 0, text, curses.color_pair(i))
-
+            self.window.addstr(i + 1, 0, text, curses.color_pair(i))
         self.window.refresh()
 
 
@@ -79,42 +103,22 @@ class ScrollListWindow(object):
             self.selected += 1
         self.render()
 
-    def up_page(self):
-        for i in range(NUM_COLORS):
-            self.up()
-
-    def down_page(self):
-        for i in range(NUM_COLORS):
-            self.down()
-
-    def top(self):
-        for i in range(len(self.data)):
-            self.up()
-
-    def bottom(self):
-        for i in range(len(self.data)):
-            self.down()
-
     def render(self):
         end = self.offset + self.lines
-
         line = 0
         for i, value in enumerate(self.data):
             if i < self.offset:
                 continue
             elif i == end:
                 break
-
             if line == self.selected:
                 self.value = value
                 attrs = curses.A_REVERSE
             else:
                 attrs = 0
-
-            self.window.addstr(line, 0, (self.cols - 1) * ' ', attrs)
-            self.window.addstr(line, 0, value[:self.cols-1], attrs)
+            self.window.addstr(line, 0, ' ' * (self.cols - 1), attrs)
+            self.window.addstr(line, 0, value[:self.cols - 1], attrs)
             line += 1
-
         self.window.refresh()
 
 
@@ -126,53 +130,35 @@ def run_curses_app():
     curses.use_default_colors()
     curses.curs_set(0)
     curses.noecho()
-
-    themes = {s.name: s for s in get_themes(BASE16_SCRIPTS_DIR)}
-
-    scroll_list_cols = 35
+    default_theme = get_default_theme()
+    themes = {s.name: s for s in get_themes()}
+    scroll_list_cols = 25
     preview_cols = 42
-
     total_cols = scroll_list_cols + preview_cols
-
     scroll_list_win = ScrollListWindow(NUM_COLORS, scroll_list_cols)
     preview_win = PreviewWindow(NUM_COLORS, preview_cols, 0, scroll_list_cols)
-
     preview_win.render()
-
     scroll_list_win.set_data(sorted(themes.keys()))
     scroll_list_win.render()
-
     themes[scroll_list_win.value].run_script()
-
     while True:
         scroll_list_win.render()
         preview_win.render()
         c = stdscr.getch()
-
-        if c == curses.KEY_DOWN:
+        if c == ord('j') or c == curses.KEY_DOWN:
             scroll_list_win.down()
             themes[scroll_list_win.value].run_script()
-        elif c == curses.KEY_UP:
+        elif c == ord('k') or c == curses.KEY_UP:
             scroll_list_win.up()
             themes[scroll_list_win.value].run_script()
-        elif c == curses.KEY_PPAGE:
-            scroll_list_win.up_page()
-            themes[scroll_list_win.value].run_script()
-        elif c == curses.KEY_NPAGE:
-            scroll_list_win.down_page()
-            themes[scroll_list_win.value].run_script()
-        elif c == curses.KEY_HOME:
-            scroll_list_win.top()
-            themes[scroll_list_win.value].run_script()
-        elif c == curses.KEY_END:
-            scroll_list_win.bottom()
-            themes[scroll_list_win.value].run_script()
         elif c == ord('q'):
+            if default_theme is not None:
+                default_theme.run_script()
             end_run()
         elif c == ord('\n'):
             theme = themes[scroll_list_win.value]
-            theme.run_alias()
-            end_run(theme)
+            theme.setup()
+            end_run()
         elif c == curses.KEY_RESIZE:
             if curses.LINES < NUM_COLORS:
                 raise ValueError('Terminal has less than 22 lines.')
@@ -181,15 +167,9 @@ def run_curses_app():
                     total_cols))
 
 
-def end_run(theme=None):
-    if theme is None:
-        theme = Theme(CURRENT_THEME)
-    try:
-        curses.endwin()
-        theme.run_script()
-        exit()
-    except KeyboardInterrupt:
-        end_run()
+def end_run():
+    curses.endwin()
+    exit()
 
 
 def main():
@@ -197,17 +177,15 @@ def main():
         formatter_class=argparse.RawTextHelpFormatter,
         description="""
 keys:
-  up/down      move 1
-  pgup/pgdown  move page
-  home/end     go to beginning/end
+  j,up/k,down  move 1
   q            quit
   enter        enable theme and quit
 """)
-    parser.add_argument(
-        '--version',
-        action='version',
-        version=pkg_resources.get_distribution('base16-shell-preview').version
-    )
+    # parser.add_argument(
+    #     '--version',
+    #     action='version',
+    #     version=pkg_resources.get_distribution('frontemale').version
+    # )
     parser.parse_args()
 
     try:
