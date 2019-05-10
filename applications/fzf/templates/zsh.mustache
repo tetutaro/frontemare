@@ -1,0 +1,55 @@
+# {{scheme-slug}}
+# Author: {{scheme-author}}
+
+# Setup fzf
+# ---------
+if [[ ! "$PATH" == */usr/local/opt/fzf/bin* ]]; then
+    export PATH="${PATH:+${PATH}:}/usr/local/opt/fzf/bin"
+fi
+
+# Auto-completion
+# ---------------
+[[ $- == *i* ]] && source "/usr/local/opt/fzf/shell/completion.zsh" 2> /dev/null
+
+# Key bindings
+# ------------
+source "/usr/local/opt/fzf/shell/key-bindings.zsh"
+
+source "$HOME/.config/frontemare-fzf/sh/frontemare.fzf_color.sh"
+
+# fzf + ag configuration
+# ------------
+export FZF_DEFAULT_COMMAND='ag --ignore "Library" --ignore "Applications" --ignore "Pictures" --ignore "Music" --ignore "Movies" --ignore "__pycache__" --nocolor -g ""'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND="command find -L . -mindepth 1 \\( -path '*/\\.*' -or -fstype 'sysfs' -or -fstype 'devfs' -or -fstype 'devtmpfs' -or -fstype 'proc' -or -path '*/Library' -or -path '*/Applications' -or -path '*/Pictures' -or -path '*/Music' -or -path '*/Movies' -or -path '*/__pycache__' \\) -prune -or -type d -print 2>/dev/null | cut -b3-"
+
+_gen_fzf_default_opts() {
+
+local color00='#{{base00-hex}}'
+local color01='#{{base01-hex}}'
+local color02='#{{base02-hex}}'
+local color03='#{{base03-hex}}'
+local color04='#{{base04-hex}}'
+local color05='#{{base05-hex}}'
+local color06='#{{base06-hex}}'
+local color07='#{{base07-hex}}'
+local color08='#{{base08-hex}}'
+local color09='#{{base09-hex}}'
+local color0A='#{{base0A-hex}}'
+local color0B='#{{base0B-hex}}'
+local color0C='#{{base0C-hex}}'
+local color0D='#{{base0D-hex}}'
+local color0E='#{{base0E-hex}}'
+local color0F='#{{base0F-hex}}'
+
+export FZF_DEFAULT_OPTS="\
+    --color=fg:$color0F,bg:$color00,hl:$color0C\
+    --color=fg+:$color0F,bg+:$color06,gutter:$color00,hl+:$color0C\
+    --color=prompt:$color0C,pointer:$color0A,marker:$color0A\
+    --color=spinner:$color09,info:$color0B\
+    --tac --cycle --layout=reverse --select-1 --exit-0\
+"
+
+}
+
+_gen_fzf_default_opts
