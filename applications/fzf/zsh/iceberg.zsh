@@ -1,5 +1,5 @@
-# {{scheme-slug}}
-# Author: {{scheme-author}}
+# iceberg
+# Author: cocopon (https://cocopon.github.io/iceberg.vim/)
 
 # Setup fzf
 # ---------
@@ -26,22 +26,22 @@ export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -100' --preview-window down:
 
 _gen_fzf_default_opts() {
 
-local color00='#{{base00-hex}}'
-local color01='#{{base01-hex}}'
-local color02='#{{base02-hex}}'
-local color03='#{{base03-hex}}'
-local color04='#{{base04-hex}}'
-local color05='#{{base05-hex}}'
-local color06='#{{base06-hex}}'
-local color07='#{{base07-hex}}'
-local color08='#{{base08-hex}}'
-local color09='#{{base09-hex}}'
-local color0A='#{{base0A-hex}}'
-local color0B='#{{base0B-hex}}'
-local color0C='#{{base0C-hex}}'
-local color0D='#{{base0D-hex}}'
-local color0E='#{{base0E-hex}}'
-local color0F='#{{base0F-hex}}'
+local color00='#161821'
+local color01='#b56060'
+local color02='#909868'
+local color03='#b68866'
+local color04='#6a809e'
+local color05='#80769f'
+local color06='#6e939b'
+local color07='#272c42'
+local color08='#3d425b'
+local color09='#e27878'
+local color0A='#b4be82'
+local color0B='#e4aa80'
+local color0C='#84a0c6'
+local color0D='#a093c7'
+local color0E='#89b8c2'
+local color0F='#c6c8d1'
 
 export FZF_DEFAULT_OPTS="\
     --color=fg:$color0F,bg:$color00,hl:$color0C\

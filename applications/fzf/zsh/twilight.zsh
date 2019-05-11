@@ -1,5 +1,5 @@
-# {{scheme-slug}}
-# Author: {{scheme-author}}
+# twilight
+# Author: David Hart (https://github.com/hartbit)
 
 # Setup fzf
 # ---------
@@ -26,22 +26,22 @@ export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -100' --preview-window down:
 
 _gen_fzf_default_opts() {
 
-local color00='#{{base00-hex}}'
-local color01='#{{base01-hex}}'
-local color02='#{{base02-hex}}'
-local color03='#{{base03-hex}}'
-local color04='#{{base04-hex}}'
-local color05='#{{base05-hex}}'
-local color06='#{{base06-hex}}'
-local color07='#{{base07-hex}}'
-local color08='#{{base08-hex}}'
-local color09='#{{base09-hex}}'
-local color0A='#{{base0A-hex}}'
-local color0B='#{{base0B-hex}}'
-local color0C='#{{base0C-hex}}'
-local color0D='#{{base0D-hex}}'
-local color0E='#{{base0E-hex}}'
-local color0F='#{{base0F-hex}}'
+local color00='#1e1e1e'
+local color01='#cf6a4c'
+local color02='#8f9d6a'
+local color03='#f9ee98'
+local color04='#7587a6'
+local color05='#9b859d'
+local color06='#afc4db'
+local color07='#a7a7a7'
+local color08='#5f5a60'
+local color09='#cf6a4c'
+local color0A='#8f9d6a'
+local color0B='#f9ee98'
+local color0C='#7587a6'
+local color0D='#9b859d'
+local color0E='#afc4db'
+local color0F='#ffffff'
 
 export FZF_DEFAULT_OPTS="\
     --color=fg:$color0F,bg:$color00,hl:$color0C\

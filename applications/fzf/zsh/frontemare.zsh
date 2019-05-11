@@ -1,5 +1,5 @@
-# {{scheme-slug}}
-# Author: {{scheme-author}}
+# frontemare
+# Author: tetutaro
 
 # Setup fzf
 # ---------
@@ -26,22 +26,22 @@ export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -100' --preview-window down:
 
 _gen_fzf_default_opts() {
 
-local color00='#{{base00-hex}}'
-local color01='#{{base01-hex}}'
-local color02='#{{base02-hex}}'
-local color03='#{{base03-hex}}'
-local color04='#{{base04-hex}}'
-local color05='#{{base05-hex}}'
-local color06='#{{base06-hex}}'
-local color07='#{{base07-hex}}'
-local color08='#{{base08-hex}}'
-local color09='#{{base09-hex}}'
-local color0A='#{{base0A-hex}}'
-local color0B='#{{base0B-hex}}'
-local color0C='#{{base0C-hex}}'
-local color0D='#{{base0D-hex}}'
-local color0E='#{{base0E-hex}}'
-local color0F='#{{base0F-hex}}'
+local color00='#000000'
+local color01='#996375'
+local color02='#639999'
+local color03='#997563'
+local color04='#637599'
+local color05='#756399'
+local color06='#638799'
+local color07='#637599'
+local color08='#8da6d9'
+local color09='#d98da6'
+local color0A='#8dd9d9'
+local color0B='#d9a68d'
+local color0C='#8da6d9'
+local color0D='#a68dd9'
+local color0E='#8dc0d9'
+local color0F='#d3d5d9'
 
 export FZF_DEFAULT_OPTS="\
     --color=fg:$color0F,bg:$color00,hl:$color0C\

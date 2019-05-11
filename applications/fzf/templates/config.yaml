@@ -1,7 +1,7 @@
-sh:
-    extension: .fzf_color.sh
-    output: sh
+zsh:
+    extension: .zsh
+    output: zsh
 
-fish:
-    extension: .fzf_color.fish
-    output: fish
+bash:
+    extension: .bash
+    output: bash

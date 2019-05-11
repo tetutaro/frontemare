@@ -1,5 +1,5 @@
-# {{scheme-slug}}
-# Author: {{scheme-author}}
+# ocean
+# Author: Chris Kempson (http://chriskempson.com)
 
 # Setup fzf
 # ---------
@@ -26,22 +26,22 @@ export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -100' --preview-window down:
 
 _gen_fzf_default_opts() {
 
-local color00='#{{base00-hex}}'
-local color01='#{{base01-hex}}'
-local color02='#{{base02-hex}}'
-local color03='#{{base03-hex}}'
-local color04='#{{base04-hex}}'
-local color05='#{{base05-hex}}'
-local color06='#{{base06-hex}}'
-local color07='#{{base07-hex}}'
-local color08='#{{base08-hex}}'
-local color09='#{{base09-hex}}'
-local color0A='#{{base0A-hex}}'
-local color0B='#{{base0B-hex}}'
-local color0C='#{{base0C-hex}}'
-local color0D='#{{base0D-hex}}'
-local color0E='#{{base0E-hex}}'
-local color0F='#{{base0F-hex}}'
+local color00='#2b303b'
+local color01='#bf616a'
+local color02='#a3be8c'
+local color03='#ebcb8b'
+local color04='#8fa1b3'
+local color05='#b48ead'
+local color06='#96b5b4'
+local color07='#c0c5ce'
+local color08='#65737e'
+local color09='#bf616a'
+local color0A='#a3be8c'
+local color0B='#ebcb8b'
+local color0C='#8fa1b3'
+local color0D='#b48ead'
+local color0E='#96b5b4'
+local color0F='#eff1f5'
 
 export FZF_DEFAULT_OPTS="\
     --color=fg:$color0F,bg:$color00,hl:$color0C\
