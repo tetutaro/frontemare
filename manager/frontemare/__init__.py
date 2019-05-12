@@ -39,7 +39,7 @@ FRONTEMARE_FZF_ZSH = '~/.fzf.zsh'
 FRONTEMARE_FZF_DIR = '~/.config/frontemare-fzf'
 FRONTEMARE_VIM_PATH = '~/.vim/colors.vim'
 FRONTEMARE_VIM_RC = '''"" This file is automatically created by frontemare
-if exists('g:colors_name') || g:colors_name != '{theme}'
+if !exists('g:colors_name') || g:colors_name != '{theme}'
     colorscheme {theme}
 endif
 '''
