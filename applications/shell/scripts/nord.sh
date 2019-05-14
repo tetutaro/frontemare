@@ -1,22 +1,24 @@
 #!/bin/sh
 # Nord scheme by arcticicestudio (https://www.nordtheme.com/)
 
-color00="2e/34/40"
+colorBG="2e/34/40"
+colorFG="ec/ef/f4"
+color00="3b/42/52"
 color01="bf/61/6a"
-color02="a3/be/8c"
-color03="eb/cb/8b"
+color02="8f/bc/bb"
+color03="d0/87/70"
 color04="5e/81/ac"
 color05="b4/8e/ad"
 color06="88/c0/d0"
 color07="4c/56/6a"
-color08="d8/de/e9"
+color08="43/4c/5e"
 color09="bf/61/6a"
 color10="a3/be/8c"
 color11="eb/cb/8b"
-color12="5e/81/ac"
+color12="81/a1/c1"
 color13="b4/8e/ad"
 color14="88/c0/d0"
-color15="ec/ef/f4"
+color15="d8/de/e9"
 
 if [ -n "$TMUX" ]; then
   # Tell tmux to pass the escape sequences through
@@ -77,8 +79,8 @@ if [ -n "$ITERM_SESSION_ID" ]; then
   put_template_custom Pl eceff4 # cursor
   put_template_custom Pm 2e3440 # cursor text
 else
-  put_template_var 10 $color15 # foreground
-  put_template_var 11 $color00 # background
+  put_template_var 10 $colorFG # foreground
+  put_template_var 11 $colorBG # background
   if [ "${TERM%%-*}" = "rxvt" ]; then
     put_template_var 708 $color00 # internal border (rxvt)
   fi

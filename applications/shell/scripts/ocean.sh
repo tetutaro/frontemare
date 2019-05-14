@@ -1,6 +1,8 @@
 #!/bin/sh
 # Ocean scheme by Chris Kempson (http://chriskempson.com)
 
+colorBG="2b/30/3b"
+colorFG="c0/c5/ce"
 color00="2b/30/3b"
 color01="bf/61/6a"
 color02="a3/be/8c"
@@ -69,16 +71,16 @@ put_template 22 $color07
 # foreground / background / cursor color
 if [ -n "$ITERM_SESSION_ID" ]; then
   # iTerm2 proprietary escape codes
-  put_template_custom Pg eff1f5 # foreground
+  put_template_custom Pg c0c5ce # foreground
   put_template_custom Ph 2b303b # background
-  put_template_custom Pi eff1f5 # bold color
+  put_template_custom Pi c0c5ce # bold color
   put_template_custom Pj c0c5ce # selection color
-  put_template_custom Pk eff1f5 # selected text color
-  put_template_custom Pl eff1f5 # cursor
+  put_template_custom Pk c0c5ce # selected text color
+  put_template_custom Pl c0c5ce # cursor
   put_template_custom Pm 2b303b # cursor text
 else
-  put_template_var 10 $color15 # foreground
-  put_template_var 11 $color00 # background
+  put_template_var 10 $colorFG # foreground
+  put_template_var 11 $colorBG # background
   if [ "${TERM%%-*}" = "rxvt" ]; then
     put_template_var 708 $color00 # internal border (rxvt)
   fi

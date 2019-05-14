@@ -1,6 +1,8 @@
 #!/bin/sh
 # Iceberg scheme by cocopon (https://cocopon.github.io/iceberg.vim/)
 
+colorBG="16/18/21"
+colorFG="c6/c8/d1"
 color00="16/18/21"
 color01="b5/60/60"
 color02="90/98/68"
@@ -77,8 +79,8 @@ if [ -n "$ITERM_SESSION_ID" ]; then
   put_template_custom Pl c6c8d1 # cursor
   put_template_custom Pm 161821 # cursor text
 else
-  put_template_var 10 $color15 # foreground
-  put_template_var 11 $color00 # background
+  put_template_var 10 $colorFG # foreground
+  put_template_var 11 $colorBG # background
   if [ "${TERM%%-*}" = "rxvt" ]; then
     put_template_var 708 $color00 # internal border (rxvt)
   fi

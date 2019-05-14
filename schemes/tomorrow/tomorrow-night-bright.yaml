@@ -1,5 +1,7 @@
 scheme: "Tomorrow Night Bright"
 author: "Chris Kempson (http://chriskempson.com)"
+baseBG: "000000"
+baseFG: "424242"
 base00: "000000"
 base01: "D54E53"
 base02: "B9CA4A"

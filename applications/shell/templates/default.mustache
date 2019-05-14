@@ -1,6 +1,8 @@
 #!/bin/sh
 # {{scheme-name}} scheme by {{scheme-author}}
 
+colorBG="{{baseBG-hex-r}}/{{baseBG-hex-g}}/{{baseBG-hex-b}}"
+colorFG="{{baseFG-hex-r}}/{{baseFG-hex-g}}/{{baseFG-hex-b}}"
 color00="{{base00-hex-r}}/{{base00-hex-g}}/{{base00-hex-b}}"
 color01="{{base01-hex-r}}/{{base01-hex-g}}/{{base01-hex-b}}"
 color02="{{base02-hex-r}}/{{base02-hex-g}}/{{base02-hex-b}}"
@@ -69,16 +71,16 @@ put_template 22 $color07
 # foreground / background / cursor color
 if [ -n "$ITERM_SESSION_ID" ]; then
   # iTerm2 proprietary escape codes
-  put_template_custom Pg {{base0F-hex}} # foreground
-  put_template_custom Ph {{base00-hex}} # background
-  put_template_custom Pi {{base0F-hex}} # bold color
+  put_template_custom Pg {{baseFG-hex}} # foreground
+  put_template_custom Ph {{baseBG-hex}} # background
+  put_template_custom Pi {{baseFG-hex}} # bold color
   put_template_custom Pj {{base07-hex}} # selection color
-  put_template_custom Pk {{base0F-hex}} # selected text color
-  put_template_custom Pl {{base0F-hex}} # cursor
-  put_template_custom Pm {{base00-hex}} # cursor text
+  put_template_custom Pk {{baseFG-hex}} # selected text color
+  put_template_custom Pl {{baseFG-hex}} # cursor
+  put_template_custom Pm {{baseBG-hex}} # cursor text
 else
-  put_template_var 10 $color15 # foreground
-  put_template_var 11 $color00 # background
+  put_template_var 10 $colorFG # foreground
+  put_template_var 11 $colorBG # background
   if [ "${TERM%%-*}" = "rxvt" ]; then
     put_template_var 708 $color00 # internal border (rxvt)
   fi

@@ -11,6 +11,7 @@ td {
 .desc {
     text-align: left;
 }
+.bgBG { background-color: #{{baseBG-hex}}; }
 .bg00 { background-color: #{{base00-hex}}; }
 .bg01 { background-color: #{{base01-hex}}; }
 .bg02 { background-color: #{{base02-hex}}; }
@@ -19,7 +20,8 @@ td {
 .bg05 { background-color: #{{base05-hex}}; }
 .bg06 { background-color: #{{base06-hex}}; }
 .bg07 { background-color: #{{base07-hex}}; }
-.fg08 { color: #{{base08-hex}}; }
+.bg08 { background-color: #{{base08-hex}}; }
+.fgFG { color: #{{baseFG-hex}}; }
 .fg09 { color: #{{base09-hex}}; }
 .fg0A { color: #{{base0A-hex}}; }
 .fg0B { color: #{{base0B-hex}}; }
@@ -35,98 +37,120 @@ td {
 <thead>
 <tr>
 <th>bg\fg</th>
-<th>base08</th><th>base09</th><th>base0A</th><th>base0B</th>
-<th>base0C</th><th>base0D</th><th>base0E</th><th>base0F</th>
+<th>baseFG</th><th>base0F</th><th>base09</th><th>base0A</th>
+<th>base0B</th><th>base0C</th><th>base0D</th><th>base0E</th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<th>baseBG</th>
+<td class="bgBG fgFG">bgBG<br/>fgFG</td>
+<td class="bgBG fg0F">bgBG<br/>fg0F</td>
+<td class="bgBG fg09">bgBG<br/>fg09</td>
+<td class="bgBG fg0A">bgBG<br/>fg0A</td>
+<td class="bgBG fg0B">bgBG<br/>fg0B</td>
+<td class="bgBG fg0C">bgBG<br/>fg0C</td>
+<td class="bgBG fg0D">bgBG<br/>fg0D</td>
+<td class="bgBG fg0E">bgBG<br/>fg0E</td>
+</tr>
+<tr>
 <th>base00</th>
-<td class="bg00 fg08">bg00<br/>fg08</td>
+<td class="bg00 fgFG">bg00<br/>fgFG</td>
+<td class="bg00 fg0F">bg00<br/>fg0F</td>
 <td class="bg00 fg09">bg00<br/>fg09</td>
 <td class="bg00 fg0A">bg00<br/>fg0A</td>
 <td class="bg00 fg0B">bg00<br/>fg0B</td>
 <td class="bg00 fg0C">bg00<br/>fg0C</td>
 <td class="bg00 fg0D">bg00<br/>fg0D</td>
 <td class="bg00 fg0E">bg00<br/>fg0E</td>
-<td class="bg00 fg0F">bg00<br/>fg0F</td>
 </tr>
 <tr>
-<th>base01</th>
-<td class="bg01 fg08">bg01<br/>fg08</td>
-<td class="bg01 fg09">bg01<br/>fg09</td>
-<td class="bg01 fg0A">bg01<br/>fg0A</td>
-<td class="bg01 fg0B">bg01<br/>fg0B</td>
-<td class="bg01 fg0C">bg01<br/>fg0C</td>
-<td class="bg01 fg0D">bg01<br/>fg0D</td>
-<td class="bg01 fg0E">bg01<br/>fg0E</td>
-<td class="bg01 fg0F">bg01<br/>fg0F</td>
-</tr>
-<tr>
-<th>base02</th>
-<td class="bg02 fg08">bg02<br/>fg08</td>
-<td class="bg02 fg09">bg02<br/>fg09</td>
-<td class="bg02 fg0A">bg02<br/>fg0A</td>
-<td class="bg02 fg0B">bg02<br/>fg0B</td>
-<td class="bg02 fg0C">bg02<br/>fg0C</td>
-<td class="bg02 fg0D">bg02<br/>fg0D</td>
-<td class="bg02 fg0E">bg02<br/>fg0E</td>
-<td class="bg02 fg0F">bg02<br/>fg0F</td>
-</tr>
-<tr>
-<th>base03</th>
-<td class="bg03 fg08">bg03<br/>fg08</td>
-<td class="bg03 fg09">bg03<br/>fg09</td>
-<td class="bg03 fg0A">bg03<br/>fg0A</td>
-<td class="bg03 fg0B">bg03<br/>fg0B</td>
-<td class="bg03 fg0C">bg03<br/>fg0C</td>
-<td class="bg03 fg0D">bg03<br/>fg0D</td>
-<td class="bg03 fg0E">bg03<br/>fg0E</td>
-<td class="bg03 fg0F">bg03<br/>fg0F</td>
-</tr>
-<tr>
-<th>base04</th>
-<td class="bg04 fg08">bg04<br/>fg08</td>
-<td class="bg04 fg09">bg04<br/>fg09</td>
-<td class="bg04 fg0A">bg04<br/>fg0A</td>
-<td class="bg04 fg0B">bg04<br/>fg0B</td>
-<td class="bg04 fg0C">bg04<br/>fg0C</td>
-<td class="bg04 fg0D">bg04<br/>fg0D</td>
-<td class="bg04 fg0E">bg04<br/>fg0E</td>
-<td class="bg04 fg0F">bg04<br/>fg0F</td>
-</tr>
-<tr>
-<th>base05</th>
-<td class="bg05 fg08">bg05<br/>fg08</td>
-<td class="bg05 fg09">bg05<br/>fg09</td>
-<td class="bg05 fg0A">bg05<br/>fg0A</td>
-<td class="bg05 fg0B">bg05<br/>fg0B</td>
-<td class="bg05 fg0C">bg05<br/>fg0C</td>
-<td class="bg05 fg0D">bg05<br/>fg0D</td>
-<td class="bg05 fg0E">bg05<br/>fg0E</td>
-<td class="bg05 fg0F">bg05<br/>fg0F</td>
-</tr>
-<tr>
-<th>base06</th>
-<td class="bg06 fg08">bg06<br/>fg08</td>
-<td class="bg06 fg09">bg06<br/>fg09</td>
-<td class="bg06 fg0A">bg06<br/>fg0A</td>
-<td class="bg06 fg0B">bg06<br/>fg0B</td>
-<td class="bg06 fg0C">bg06<br/>fg0C</td>
-<td class="bg06 fg0D">bg06<br/>fg0D</td>
-<td class="bg06 fg0E">bg06<br/>fg0E</td>
-<td class="bg06 fg0F">bg06<br/>fg0F</td>
+<th>base08</th>
+<td class="bg08 fgFG">bg08<br/>fgFG</td>
+<td class="bg08 fg0F">bg08<br/>fg0F</td>
+<td class="bg08 fg09">bg08<br/>fg09</td>
+<td class="bg08 fg0A">bg08<br/>fg0A</td>
+<td class="bg08 fg0B">bg08<br/>fg0B</td>
+<td class="bg08 fg0C">bg08<br/>fg0C</td>
+<td class="bg08 fg0D">bg08<br/>fg0D</td>
+<td class="bg08 fg0E">bg08<br/>fg0E</td>
 </tr>
 <tr>
 <th>base07</th>
-<td class="bg07 fg08">bg07<br/>fg08</td>
+<td class="bg07 fgFG">bg07<br/>fgFG</td>
+<td class="bg07 fg0F">bg07<br/>fg0F</td>
 <td class="bg07 fg09">bg07<br/>fg09</td>
 <td class="bg07 fg0A">bg07<br/>fg0A</td>
 <td class="bg07 fg0B">bg07<br/>fg0B</td>
 <td class="bg07 fg0C">bg07<br/>fg0C</td>
 <td class="bg07 fg0D">bg07<br/>fg0D</td>
 <td class="bg07 fg0E">bg07<br/>fg0E</td>
-<td class="bg07 fg0F">bg07<br/>fg0F</td>
+</tr>
+<tr>
+<th>base01</th>
+<td class="bg01 fgFG">bg01<br/>fgFG</td>
+<td class="bg01 fg0F">bg01<br/>fg0F</td>
+<td class="bg01 fg09">bg01<br/>fg09</td>
+<td class="bg01 fg0A">bg01<br/>fg0A</td>
+<td class="bg01 fg0B">bg01<br/>fg0B</td>
+<td class="bg01 fg0C">bg01<br/>fg0C</td>
+<td class="bg01 fg0D">bg01<br/>fg0D</td>
+<td class="bg01 fg0E">bg01<br/>fg0E</td>
+</tr>
+<tr>
+<th>base02</th>
+<td class="bg02 fgFG">bg02<br/>fgFG</td>
+<td class="bg02 fg0F">bg02<br/>fg0F</td>
+<td class="bg02 fg09">bg02<br/>fg09</td>
+<td class="bg02 fg0A">bg02<br/>fg0A</td>
+<td class="bg02 fg0B">bg02<br/>fg0B</td>
+<td class="bg02 fg0C">bg02<br/>fg0C</td>
+<td class="bg02 fg0D">bg02<br/>fg0D</td>
+<td class="bg02 fg0E">bg02<br/>fg0E</td>
+</tr>
+<tr>
+<th>base03</th>
+<td class="bg03 fgFG">bg03<br/>fgFG</td>
+<td class="bg03 fg0F">bg03<br/>fg0F</td>
+<td class="bg03 fg09">bg03<br/>fg09</td>
+<td class="bg03 fg0A">bg03<br/>fg0A</td>
+<td class="bg03 fg0B">bg03<br/>fg0B</td>
+<td class="bg03 fg0C">bg03<br/>fg0C</td>
+<td class="bg03 fg0D">bg03<br/>fg0D</td>
+<td class="bg03 fg0E">bg03<br/>fg0E</td>
+</tr>
+<tr>
+<th>base04</th>
+<td class="bg04 fgFG">bg04<br/>fgFG</td>
+<td class="bg04 fg0F">bg04<br/>fg0F</td>
+<td class="bg04 fg09">bg04<br/>fg09</td>
+<td class="bg04 fg0A">bg04<br/>fg0A</td>
+<td class="bg04 fg0B">bg04<br/>fg0B</td>
+<td class="bg04 fg0C">bg04<br/>fg0C</td>
+<td class="bg04 fg0D">bg04<br/>fg0D</td>
+<td class="bg04 fg0E">bg04<br/>fg0E</td>
+</tr>
+<tr>
+<th>base05</th>
+<td class="bg05 fgFG">bg05<br/>fgFG</td>
+<td class="bg05 fg0F">bg05<br/>fg0F</td>
+<td class="bg05 fg09">bg05<br/>fg09</td>
+<td class="bg05 fg0A">bg05<br/>fg0A</td>
+<td class="bg05 fg0B">bg05<br/>fg0B</td>
+<td class="bg05 fg0C">bg05<br/>fg0C</td>
+<td class="bg05 fg0D">bg05<br/>fg0D</td>
+<td class="bg05 fg0E">bg05<br/>fg0E</td>
+</tr>
+<tr>
+<th>base06</th>
+<td class="bg06 fgFG">bg06<br/>fgFG</td>
+<td class="bg06 fg0F">bg06<br/>fg0F</td>
+<td class="bg06 fg09">bg06<br/>fg09</td>
+<td class="bg06 fg0A">bg06<br/>fg0A</td>
+<td class="bg06 fg0B">bg06<br/>fg0B</td>
+<td class="bg06 fg0C">bg06<br/>fg0C</td>
+<td class="bg06 fg0D">bg06<br/>fg0D</td>
+<td class="bg06 fg0E">bg06<br/>fg0E</td>
 </tr>
 </tbody>
 </table>

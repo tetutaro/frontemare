@@ -1,5 +1,7 @@
 scheme: "frontemare"
 author: "tetutaro"
+baseBG: "000000"
+baseFG: "d3d5d9"
 base00: "000000"
 base01: '996375'
 base02: '639999'

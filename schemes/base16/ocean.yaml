@@ -1,5 +1,7 @@
 scheme: "Ocean"
 author: "Chris Kempson (http://chriskempson.com)"
+baseBG: "2B303B"
+baseFG: "C0C5CE"
 base00: "2B303B"
 base01: "BF616A"
 base02: "A3BE8C"

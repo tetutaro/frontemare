@@ -1,6 +1,8 @@
 #!/bin/sh
 # Tomorrow Night scheme by Chris Kempson (http://chriskempson.com)
 
+colorBG="1d/1f/21"
+colorFG="c5/c8/c6"
 color00="1d/1f/21"
 color01="cc/66/66"
 color02="b5/bd/68"
@@ -69,16 +71,16 @@ put_template 22 $color07
 # foreground / background / cursor color
 if [ -n "$ITERM_SESSION_ID" ]; then
   # iTerm2 proprietary escape codes
-  put_template_custom Pg ffffff # foreground
+  put_template_custom Pg c5c8c6 # foreground
   put_template_custom Ph 1d1f21 # background
-  put_template_custom Pi ffffff # bold color
+  put_template_custom Pi c5c8c6 # bold color
   put_template_custom Pj c5c8c6 # selection color
-  put_template_custom Pk ffffff # selected text color
-  put_template_custom Pl ffffff # cursor
+  put_template_custom Pk c5c8c6 # selected text color
+  put_template_custom Pl c5c8c6 # cursor
   put_template_custom Pm 1d1f21 # cursor text
 else
-  put_template_var 10 $color15 # foreground
-  put_template_var 11 $color00 # background
+  put_template_var 10 $colorFG # foreground
+  put_template_var 11 $colorBG # background
   if [ "${TERM%%-*}" = "rxvt" ]; then
     put_template_var 708 $color00 # internal border (rxvt)
   fi

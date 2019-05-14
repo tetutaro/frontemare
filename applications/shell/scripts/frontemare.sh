@@ -1,6 +1,8 @@
 #!/bin/sh
 # frontemare scheme by tetutaro
 
+colorBG="00/00/00"
+colorFG="d3/d5/d9"
 color00="00/00/00"
 color01="99/63/75"
 color02="63/99/99"
@@ -77,8 +79,8 @@ if [ -n "$ITERM_SESSION_ID" ]; then
   put_template_custom Pl d3d5d9 # cursor
   put_template_custom Pm 000000 # cursor text
 else
-  put_template_var 10 $color15 # foreground
-  put_template_var 11 $color00 # background
+  put_template_var 10 $colorFG # foreground
+  put_template_var 11 $colorBG # background
   if [ "${TERM%%-*}" = "rxvt" ]; then
     put_template_var 708 $color00 # internal border (rxvt)
   fi

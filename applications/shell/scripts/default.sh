@@ -1,6 +1,8 @@
 #!/bin/sh
 # Default Dark scheme by Chris Kempson (http://chriskempson.com)
 
+colorBG="15/15/15"
+colorFG="d0/d0/d0"
 color00="15/15/15"
 color01="8a/34/35"
 color02="73/87/47"
@@ -69,16 +71,16 @@ put_template 22 $color07
 # foreground / background / cursor color
 if [ -n "$ITERM_SESSION_ID" ]; then
   # iTerm2 proprietary escape codes
-  put_template_custom Pg f5f5f5 # foreground
+  put_template_custom Pg d0d0d0 # foreground
   put_template_custom Ph 151515 # background
-  put_template_custom Pi f5f5f5 # bold color
+  put_template_custom Pi d0d0d0 # bold color
   put_template_custom Pj d0d0d0 # selection color
-  put_template_custom Pk f5f5f5 # selected text color
-  put_template_custom Pl f5f5f5 # cursor
+  put_template_custom Pk d0d0d0 # selected text color
+  put_template_custom Pl d0d0d0 # cursor
   put_template_custom Pm 151515 # cursor text
 else
-  put_template_var 10 $color15 # foreground
-  put_template_var 11 $color00 # background
+  put_template_var 10 $colorFG # foreground
+  put_template_var 11 $colorBG # background
   if [ "${TERM%%-*}" = "rxvt" ]; then
     put_template_var 708 $color00 # internal border (rxvt)
   fi

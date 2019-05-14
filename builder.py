@@ -9,12 +9,44 @@ import yaml
 
 class FrontemareBuilder(object):
     """builder for frontemare"""
+    rgb_base = (255.0, 255.0, 255.0)
+    hsv_base = (360.0, 100.0, 100.0)
 
     def __init__(self):
         with open('sources.yaml', 'r') as rf:
             self.sources_ = yaml.load(rf.read(), Loader=yaml.SafeLoader)
         self.schemes_ = self._read_schemes()
         self.templates_ = self._read_templates()
+        return
+
+    def _set_scheme_color(self, scheme, c, chex):
+        scheme['base%s-hex' % c] = chex
+        assert(len(chex) == 6)
+        rgb = dict()
+        for j, t in enumerate('rgb'):
+            thex = chex[j * 2: (j + 1) * 2]
+            scheme['base%s-hex-%s' % (c, t)] = thex
+            scheme[
+                'base%s-hex-%s-pad' % (c, t)
+            ] = thex.rjust(3)
+            trgb = int(thex, 16)
+            scheme['base%s-rgb-%s' % (c, t)] = str(trgb)
+            scheme[
+                'base%s-rgb-%s-pad' % (c, t)
+            ] = str(trgb).rjust(3)
+            tdec = float(trgb) / self.rgb_base[j]
+            rgb[t] = tdec
+            scheme['base%s-dec-%s' % (c, t)] = str(tdec)
+            scheme[
+                'base%s-dec-%s-pad' % (c, t)
+            ] = str(round(tdec, 4)).ljust(6)
+        hsv = colorsys.rgb_to_hsv(rgb['r'], rgb['g'], rgb['b'])
+        for j, t in enumerate('hsv'):
+            thsv = int(round(hsv[j] * self.hsv_base[j]))
+            scheme['base%s-hsv-%s' % (c, t)] = str(thsv)
+            scheme[
+                'base%s-hsv-%s-pad' % (c, t)
+            ] = str(thsv).rjust(3)
         return
 
     def _check_scheme(self, given, fname):
@@ -26,40 +58,16 @@ class FrontemareBuilder(object):
         scheme['scheme-slug'] = os.path.splitext(os.path.basename(
             fname
         ))[0].replace(' ', '-')
+        assert(given.get('baseBG'))
+        chex = given.get('baseBG').lower()
+        self._set_scheme_color(scheme, 'BG', chex)
+        assert(given.get('baseFG'))
+        chex = given.get('baseFG').lower()
+        self._set_scheme_color(scheme, 'FG', chex)
         for c in [format(i, '02X') for i in range(16)]:
             assert(given.get('base%s' % c))
             chex = given.get('base%s' % c).lower()
-            scheme['base%s-hex' % c] = chex
-            assert(len(chex) == 6)
-            rgb = dict()
-            for j, t in enumerate('rgb'):
-                thex = chex[j * 2: (j + 1) * 2]
-                scheme['base%s-hex-%s' % (c, t)] = thex
-                scheme[
-                    'base%s-hex-%s-pad' % (c, t)
-                ] = thex.rjust(3)
-                trgb = int(thex, 16)
-                scheme['base%s-rgb-%s' % (c, t)] = str(trgb)
-                scheme[
-                    'base%s-rgb-%s-pad' % (c, t)
-                ] = str(trgb).rjust(3)
-                tdec = float(trgb) / 255.0
-                rgb[t] = tdec
-                scheme['base%s-dec-%s' % (c, t)] = str(tdec)
-                scheme[
-                    'base%s-dec-%s-pad' % (c, t)
-                ] = str(round(tdec, 4)).ljust(6)
-            hsv = colorsys.rgb_to_hsv(rgb['r'], rgb['g'], rgb['b'])
-            for j, t in enumerate('hsv'):
-                if j == 0:
-                    tmax = 360
-                else:
-                    tmax = 100
-                thsv = int(round(hsv[j] * tmax))
-                scheme['base%s-hsv-%s' % (c, t)] = str(thsv)
-                scheme[
-                    'base%s-hsv-%s-pad' % (c, t)
-                ] = str(thsv).rjust(3)
+            self._set_scheme_color(scheme, c, chex)
         return scheme
 
     def _read_schemes(self):

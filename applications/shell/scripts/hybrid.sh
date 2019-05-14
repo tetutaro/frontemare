@@ -1,14 +1,16 @@
 #!/bin/sh
 # Hybrid scheme by Andrew Wong (https://github.com/w0ng)
 
-color00="1d/1f/21"
+colorBG="1d/1f/21"
+colorFG="c5/c8/c6"
+color00="28/2a/2e"
 color01="cc/66/66"
 color02="b5/bd/68"
 color03="f0/c6/74"
 color04="81/a2/be"
 color05="b2/94/bb"
 color06="8a/be/b7"
-color07="28/2a/2e"
+color07="70/78/80"
 color08="37/3b/41"
 color09="a5/42/42"
 color10="8c/94/40"
@@ -72,13 +74,13 @@ if [ -n "$ITERM_SESSION_ID" ]; then
   put_template_custom Pg c5c8c6 # foreground
   put_template_custom Ph 1d1f21 # background
   put_template_custom Pi c5c8c6 # bold color
-  put_template_custom Pj 282a2e # selection color
+  put_template_custom Pj 707880 # selection color
   put_template_custom Pk c5c8c6 # selected text color
   put_template_custom Pl c5c8c6 # cursor
   put_template_custom Pm 1d1f21 # cursor text
 else
-  put_template_var 10 $color15 # foreground
-  put_template_var 11 $color00 # background
+  put_template_var 10 $colorFG # foreground
+  put_template_var 11 $colorBG # background
   if [ "${TERM%%-*}" = "rxvt" ]; then
     put_template_var 708 $color00 # internal border (rxvt)
   fi

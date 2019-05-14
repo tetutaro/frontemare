@@ -10,14 +10,14 @@ syntax reset
 let g:colors_name = "hybrid"
 
 "" GUI color definitions
-let s:cg00 = "#1d1f21"
+let s:cg00 = "#282a2e"
 let s:cg01 = "#cc6666"
 let s:cg02 = "#b5bd68"
 let s:cg03 = "#f0c674"
 let s:cg04 = "#81a2be"
 let s:cg05 = "#b294bb"
 let s:cg06 = "#8abeb7"
-let s:cg07 = "#282a2e"
+let s:cg07 = "#707880"
 let s:cg08 = "#373b41"
 let s:cg09 = "#a54242"
 let s:cg0A = "#8c9440"
@@ -56,14 +56,14 @@ endif
 
 " Neovim terminal colours
 if has("nvim")
-    let g:terminal_color_0 =  "#1d1f21"
+    let g:terminal_color_0 =  "#282a2e"
     let g:terminal_color_1 =  "#cc6666"
     let g:terminal_color_2 =  "#b5bd68"
     let g:terminal_color_3 =  "#f0c674"
     let g:terminal_color_4 =  "#81a2be"
     let g:terminal_color_5 =  "#b294bb"
     let g:terminal_color_6 =  "#8abeb7"
-    let g:terminal_color_7 =  "#282a2e"
+    let g:terminal_color_7 =  "#707880"
     let g:terminal_color_8 =  "#373b41"
     let g:terminal_color_9 =  "#a54242"
     let g:terminal_color_10 = "#8c9440"
@@ -76,14 +76,14 @@ if has("nvim")
     let g:terminal_color_foreground = g:terminal_color_15
 elseif has('terminal')
     let g:terminal_ansi_colors = [
-        \ "#1d1f21",
+        \ "#282a2e",
         \ "#cc6666",
         \ "#b5bd68",
         \ "#f0c674",
         \ "#81a2be",
         \ "#b294bb",
         \ "#8abeb7",
-        \ "#282a2e",
+        \ "#707880",
         \ "#373b41",
         \ "#a54242",
         \ "#8c9440",

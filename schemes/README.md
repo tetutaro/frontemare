@@ -14,22 +14,24 @@ You can set any color as you like.
 
 |  name  |  xterm  | fg/bg |  Description                               |
 |:------:|:-------:|:-----:|:-------------------------------------------|
-| base00 |   black |   bg  | Default Background                         |
+| basebg |   ----- |   bg  | Default (Darkest) Background               |
+| basefg |   ----- |   fg  | Default Foreground                         |
+| base00 |   black |   bg  | Darker Background (Used for gutter)        |
 | base01 |  maroon |   bg  | Error, Diff Deleted                        |
 | base02 |   green |   bg  | Safety, Diff Inserted                      |
 | base03 |   olive |   bg  | Warning, Diff Changed                      |
 | base04 |    navy |   bg  | Normal                                     |
 | base05 |  purple |   bg  | Menu                                       |
 | base06 |    teal |   bg  | Emphasis (Used for highlighting)           |
-| base07 |  silver |   bg  | Lighter Background (Used for status bar)   |
-| base08 |    grey |   fg  | Comments, Invisible                        |
+| base07 |  silver |   bg  | Lightest Background (Used for status bar)  |
+| base08 |    grey |   bg  | Lighter Background (Used for inactive)     |
 | base09 |     red |   fg  | Error, Exception                           |
-| base0A |    lime |   fg  | Operator, Conditional, Repeat, Decorator   |
+| base0A |    lime |   fg  | Statement (Conditional, Repeat), Special   |
 | base0B |  yellow |   fg  | Todo                                       |
-| base0C |    blue |   fg  | Library, Class, Function, Builtin, Heading |
-| base0D | fuchsia |   fg  | Statement, Link                            |
-| base0E |    aqua |   fg  | Number, String                             |
-| base0F |   white |   fg  | Default Foreground                         |
+| base0C |    blue |   fg  | Identifier(Function), Heading              |
+| base0D | fuchsia |   fg  | Preprocesser (Include, Define), Link       |
+| base0E |    aqua |   fg  | Constant (Number, String)                  |
+| base0F |   white |   fg  | Comments, Invisible                        |
 
 ## Directory & File
 

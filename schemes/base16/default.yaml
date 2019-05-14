@@ -1,5 +1,7 @@
 scheme: "Default Dark"
 author: "Chris Kempson (http://chriskempson.com)"
+baseBG: "151515"
+baseFG: "D0D0D0"
 base00: "151515"
 base01: "8A3435"
 base02: "738747"

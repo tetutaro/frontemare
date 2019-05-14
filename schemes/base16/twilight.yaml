@@ -1,5 +1,7 @@
 scheme: "Twilight"
 author: "David Hart (https://github.com/hartbit)"
+baseBG: "1E1E1E"
+baseFG: "A7A7A7"
 base00: "1E1E1E"
 base01: "CF6A4C"
 base02: "8F9D6A"

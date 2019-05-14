@@ -1,5 +1,7 @@
 scheme: "Ashes"
 author: "Jannik Siebert (https://github.com/janniks)"
+baseBG: "1C2023"
+baseFG: "C7CCD1"
 base00: "1C2023"
 base01: "9E768A"
 base02: "8A9E76"

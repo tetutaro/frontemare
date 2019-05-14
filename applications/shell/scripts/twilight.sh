@@ -1,6 +1,8 @@
 #!/bin/sh
 # Twilight scheme by David Hart (https://github.com/hartbit)
 
+colorBG="1e/1e/1e"
+colorFG="a7/a7/a7"
 color00="1e/1e/1e"
 color01="cf/6a/4c"
 color02="8f/9d/6a"
@@ -69,16 +71,16 @@ put_template 22 $color07
 # foreground / background / cursor color
 if [ -n "$ITERM_SESSION_ID" ]; then
   # iTerm2 proprietary escape codes
-  put_template_custom Pg ffffff # foreground
+  put_template_custom Pg a7a7a7 # foreground
   put_template_custom Ph 1e1e1e # background
-  put_template_custom Pi ffffff # bold color
+  put_template_custom Pi a7a7a7 # bold color
   put_template_custom Pj a7a7a7 # selection color
-  put_template_custom Pk ffffff # selected text color
-  put_template_custom Pl ffffff # cursor
+  put_template_custom Pk a7a7a7 # selected text color
+  put_template_custom Pl a7a7a7 # cursor
   put_template_custom Pm 1e1e1e # cursor text
 else
-  put_template_var 10 $color15 # foreground
-  put_template_var 11 $color00 # background
+  put_template_var 10 $colorFG # foreground
+  put_template_var 11 $colorBG # background
   if [ "${TERM%%-*}" = "rxvt" ]; then
     put_template_var 708 $color00 # internal border (rxvt)
   fi

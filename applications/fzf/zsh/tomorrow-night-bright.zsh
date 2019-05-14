@@ -26,6 +26,8 @@ export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -100' --preview-window down:
 
 _gen_fzf_default_opts() {
 
+local colorBG='#000000'
+local colorFG='#424242'
 local color00='#000000'
 local color01='#d54e53'
 local color02='#b9ca4a'
@@ -44,8 +46,8 @@ local color0E='#70c0b1'
 local color0F='#eaeaea'
 
 export FZF_DEFAULT_OPTS="\
-    --color=fg:$color0F,bg:$color00,hl:$color0C\
-    --color=fg+:$color0F,bg+:$color06,gutter:$color00,hl+:$color0C\
+    --color=fg:$colorFG,bg:$colorBG,hl:$color0C\
+    --color=fg+:$colorFG,bg+:$color06,gutter:$color00,hl+:$color0C\
     --color=prompt:$color0C,pointer:$color0A,marker:$color0A\
     --color=spinner:$color09,info:$color0B\
     --tac --cycle --layout=reverse --select-1 --exit-0\

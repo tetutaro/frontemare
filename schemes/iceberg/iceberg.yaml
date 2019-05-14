@@ -1,5 +1,7 @@
 scheme: "Iceberg"
 author: "cocopon (https://cocopon.github.io/iceberg.vim/)"
+baseBG: "161821"
+baseFG: "C6C8D1"
 base00: "161821"
 base01: "B56060"
 base02: "909868"

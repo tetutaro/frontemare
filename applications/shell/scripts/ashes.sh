@@ -1,6 +1,8 @@
 #!/bin/sh
 # Ashes scheme by Jannik Siebert (https://github.com/janniks)
 
+colorBG="1c/20/23"
+colorFG="c7/cc/d1"
 color00="1c/20/23"
 color01="9e/76/8a"
 color02="8a/9e/76"
@@ -69,16 +71,16 @@ put_template 22 $color07
 # foreground / background / cursor color
 if [ -n "$ITERM_SESSION_ID" ]; then
   # iTerm2 proprietary escape codes
-  put_template_custom Pg f3f4f5 # foreground
+  put_template_custom Pg c7ccd1 # foreground
   put_template_custom Ph 1c2023 # background
-  put_template_custom Pi f3f4f5 # bold color
+  put_template_custom Pi c7ccd1 # bold color
   put_template_custom Pj c7ccd1 # selection color
-  put_template_custom Pk f3f4f5 # selected text color
-  put_template_custom Pl f3f4f5 # cursor
+  put_template_custom Pk c7ccd1 # selected text color
+  put_template_custom Pl c7ccd1 # cursor
   put_template_custom Pm 1c2023 # cursor text
 else
-  put_template_var 10 $color15 # foreground
-  put_template_var 11 $color00 # background
+  put_template_var 10 $colorFG # foreground
+  put_template_var 11 $colorBG # background
   if [ "${TERM%%-*}" = "rxvt" ]; then
     put_template_var 708 $color00 # internal border (rxvt)
   fi

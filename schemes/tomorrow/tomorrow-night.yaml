@@ -1,5 +1,7 @@
 scheme: "Tomorrow Night"
 author: "Chris Kempson (http://chriskempson.com)"
+baseBG: "1D1F21"
+baseFG: "C5C8C6"
 base00: "1D1F21"
 base01: "CC6666"
 base02: "B5BD68"
