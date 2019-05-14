@@ -146,32 +146,29 @@ def get_default_theme() -> Optional[Theme]:
 
 
 class Window(object):
-    color_names = [
-        ' regular grey    ',
-        ' regular red     ',
-        ' regular lime    ',
-        ' regular yellow  ',
-        ' regular blue    ',
-        ' regular magenta ',
-        ' regular cyan    ',
-        ' regular white   ',
-        '    bold grey    ',
-        '    bold red     ',
-        '    bold lime    ',
-        '    bold yellow  ',
-        '    bold blue    ',
-        '    bold magenta ',
-        '    bold cyan    ',
-        '    bold white   ',
-        ' bgcolor maroon  ',
-        ' bgcolor green   ',
-        ' bgcolor olive   ',
-        ' bgcolor navy    ',
-        ' bgcolor purple  ',
-        ' bgcolor teal    ',
-        ' bgcolor silver  ',
+    bg_names = [
+        ' BG ',
+        ' 00 ',
+        ' 08 ',
+        ' 07 ',
+        ' 01 ',
+        ' 02 ',
+        ' 03 ',
+        ' 04 ',
+        ' 05 ',
+        ' 06 ',
     ]
-    num_colors = len(color_names)
+    fg_names = [
+        ' FG ',
+        ' 0F ',
+        ' 09 ',
+        ' 0A ',
+        ' 0B ',
+        ' 0C ',
+        ' 0D ',
+        ' 0E ',
+    ]
+    num_colors = len(bg_names)
     scheme_list_columns = 35
     preview_columns = 35
     total_columns = scheme_list_columns + preview_columns

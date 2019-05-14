@@ -1,5 +1,3 @@
-#!/bin/sh
-# Ashes scheme by Jannik Siebert (https://github.com/janniks)
 
 colorBG="1c/20/23"
 colorFG="c7/cc/d1"
@@ -13,12 +11,12 @@ color06="76/9e/8a"
 color07="c7/cc/d1"
 color08="74/7c/84"
 color09="c7/95/ae"
-color10="ae/c7/95"
-color11="c7/ae/95"
-color12="95/ae/c7"
-color13="ae/95/c7"
-color14="95/c7/ae"
-color15="f3/f4/f5"
+color0A="ae/c7/95"
+color0B="c7/ae/95"
+color0C="95/ae/c7"
+color0D="ae/95/c7"
+color0E="95/c7/ae"
+color0F="f3/f4/f5"
 
 if [ -n "$TMUX" ]; then
   # Tell tmux to pass the escape sequences through
@@ -42,22 +40,22 @@ else
 fi
 
 # 16 color space
-put_template 0  $color08
+put_template 0  $colorBG
 put_template 1  $color09
-put_template 2  $color10
-put_template 3  $color11
-put_template 4  $color12
-put_template 5  $color13
-put_template 6  $color14
-put_template 7  $color15
-put_template 8  $color08
+put_template 2  $color0A
+put_template 3  $color0B
+put_template 4  $color0C
+put_template 5  $color0D
+put_template 6  $color0E
+put_template 7  $colorFG
+put_template 8  $colorBG
 put_template 9  $color09
-put_template 10 $color10
-put_template 11 $color11
-put_template 12 $color12
-put_template 13 $color13
-put_template 14 $color14
-put_template 15 $color15
+put_template 10 $color0A
+put_template 11 $color0B
+put_template 12 $color0C
+put_template 13 $color0D
+put_template 14 $color0E
+put_template 15 $colorFG
 
 # 256 color space
 put_template 16 $color01
@@ -66,7 +64,6 @@ put_template 18 $color03
 put_template 19 $color04
 put_template 20 $color05
 put_template 21 $color06
-put_template 22 $color07
 
 # foreground / background / cursor color
 if [ -n "$ITERM_SESSION_ID" ]; then
@@ -74,7 +71,7 @@ if [ -n "$ITERM_SESSION_ID" ]; then
   put_template_custom Pg c7ccd1 # foreground
   put_template_custom Ph 1c2023 # background
   put_template_custom Pi c7ccd1 # bold color
-  put_template_custom Pj c7ccd1 # selection color
+  put_template_custom Pj 769e8a # selection color
   put_template_custom Pk c7ccd1 # selected text color
   put_template_custom Pl c7ccd1 # cursor
   put_template_custom Pm 1c2023 # cursor text
@@ -91,7 +88,8 @@ fi
 unset -f put_template
 unset -f put_template_var
 unset -f put_template_custom
-unset color00
+unset colorBG
+unset colorFG
 unset color01
 unset color02
 unset color03
@@ -101,17 +99,9 @@ unset color06
 unset color07
 unset color08
 unset color09
-unset color10
-unset color11
-unset color12
-unset color13
-unset color14
-unset color15
-unset color16
-unset color17
-unset color18
-unset color19
-unset color20
-unset color21
-unset color_foreground
-unset color_background
+unset color0A
+unset color0B
+unset color0C
+unset color0D
+unset color0E
+unset color0F
