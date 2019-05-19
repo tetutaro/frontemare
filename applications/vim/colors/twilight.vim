@@ -68,8 +68,8 @@ if has("nvim")
     let g:terminal_color_4 =  "#7587a6"
     let g:terminal_color_5 =  "#9b859d"
     let g:terminal_color_6 =  "#afc4db"
-    let g:terminal_color_7 =  "#ffffff"
-    let g:terminal_color_8 =  "#ffffff"
+    let g:terminal_color_7 =  "#a7a7a7"
+    let g:terminal_color_8 =  "#1e1e1e"
     let g:terminal_color_9 =  "#cf6a4c"
     let g:terminal_color_10 = "#8f9d6a"
     let g:terminal_color_11 = "#f9ee98"
@@ -88,8 +88,8 @@ elseif has('terminal')
         \ "#7587a6",
         \ "#9b859d",
         \ "#afc4db",
-        \ "#ffffff",
-        \ "#ffffff",
+        \ "#a7a7a7",
+        \ "#1e1e1e",
         \ "#cf6a4c",
         \ "#8f9d6a",
         \ "#f9ee98",
@@ -127,8 +127,8 @@ endfunction
 "" default highlighting groups
 call <SID>fHi("ColorColumn",  "",     s:cg08, "",     s:ct08, "")
 call <SID>fHi("Conceal",      s:cg0C, "",     s:ct0C, "",     "")
-call <SID>fHi("CusorColumn",  "",     s:cg06, "",     s:ct06, "NONE")
-call <SID>fHi("CursorLine",   "",     s:cg06, "",     s:ct06, "NONE")
+call <SID>fHi("CusorColumn",  "",     s:cg07, "",     s:ct07, "NONE")
+call <SID>fHi("CursorLine",   "",     s:cg07, "",     s:ct07, "NONE")
 call <SID>fHi("Directory",    s:cg0C, "",     s:ct0C, "",     "bold")
 call <SID>fHi("DiffAdd",      "",     s:cg02, "",     s:ct02, "NONE")
 call <SID>fHi("DiffChange",   "",     s:cg03, "",     s:ct03, "NONE")
@@ -136,22 +136,22 @@ call <SID>fHi("DiffDelete",   "",     s:cg01, "",     s:ct01, "NONE")
 call <SID>fHi("DiffText",     s:cg09, "",     s:ct09, "",     "bold")
 call <SID>fHi("EndOfBuffer",  s:cgFG, s:cgBG, s:ctFG, s:ctBG, "")
 call <SID>fHi("ErrorMsg",     s:cg0F, s:cg01, s:ct0F, s:ct01, "")
-call <SID>fHi("VertSplit",    s:cg00, s:cg00, s:ct00, s:ct00, "NONE")
+call <SID>fHi("VertSplit",    s:cg08, s:cg08, s:ct08, s:ct08, "NONE")
 call <SID>fHi("Folded",       s:cgFG, s:cg04, s:ctFG, s:ct04, "")
 call <SID>fHi("FoldColumn",   s:cgFG, s:cg04, s:ctFG, s:ct04, "")
 call <SID>fHi("SignColumn",   s:cgFG, s:cg04, s:ctFG, s:ct04, "")
 call <SID>fHi("IncSearch",    "",     s:cg06, "",     s:ct06, "NONE")
 call <SID>fHi("LineNr",       s:cg0F, s:cg00, s:ct0F, s:ct00, "NONE")
-call <SID>fHi("CursorLineNr", s:cg0F, s:cg06, s:ct0F, s:ct06, "NONE")
+call <SID>fHi("CursorLineNr", s:cg0C, s:cg00, s:ct0C, s:ct00, "NONE")
 call <SID>fHi("MatchParen",   "",     s:cg06, "",     s:ct06, "NONE")
 call <SID>fHi("ModeMsg",      s:cg0C, "",     s:ct0C, "",     "NONE")
 call <SID>fHi("MoreMsg",      s:cg0C, "",     s:ct0C, "",     "NONE")
 call <SID>fHi("NonText",      s:cg08, "",     s:ct08, "",     "NONE")
-call <SID>fHi("Normal",       s:cgFG, s:cg00, s:ctFG, s:ct00, "")
-call <SID>fHi("Pmenu",        s:cgFG, s:cg08, s:ctFG, s:ct08, "")
-call <SID>fHi("PmenuSel",     s:cgFG, s:cg00, s:ctFG, s:ct00, "")
+call <SID>fHi("Normal",       s:cgFG, s:cgBG, s:ctFG, s:ctBG, "")
+call <SID>fHi("Pmenu",        s:cgFG, s:cg00, s:ctFG, s:ct00, "")
+call <SID>fHi("PmenuSel",     s:cgFG, s:cg07, s:ctFG, s:ct07, "")
 call <SID>fHi("PmenuSbar",    "",     s:cg08, "",     s:ct08, "")
-call <SID>fHi("PmenuThumb",   "",     s:cg07, "",     s:ct07, "")
+call <SID>fHi("PmenuThumb",   "",     s:cg06, "",     s:ct06, "")
 call <SID>fHi("Question",     s:cg0A, "",     s:ct0A, "",     "")
 call <SID>fHi("QuickFixLine", "",     s:cg06, "",     s:ct06, "NONE")
 call <SID>fHi("Search",       "",     s:cg06, "",     s:ct06, "NONE")
@@ -165,12 +165,12 @@ call <SID>fHi("StatusLineNC", s:cgFG, s:cg00, s:ctFG, s:ct00, "NONE")
 call <SID>fHi("StatusLineTerm", s:cgFG, s:cg07, s:ctFG, s:ct07, "NONE")
 call <SID>fHi("StatusLineTermNC", s:cgFG, s:cg00, s:ctFG, s:ct00, "NONE")
 call <SID>fHi("TabLine",      s:cgFG, s:cgBG, s:ctFG, s:ctBG, "NONE")
-call <SID>fHi("TabLineFill",  s:cgFG, s:cg00, s:ctFG, s:ct00, "NONE")
+call <SID>fHi("TabLineFill",  s:cgFG, s:cgBG, s:ctFG, s:ctBG, "NONE")
 call <SID>fHi("TabLineSel",   s:cgFG, s:cg07, s:ctFG, s:ct07, "NONE")
-call <SID>fHi("Terminal",     s:cgFG, s:cg00, s:ctFG, s:ct00, "NONE")
+call <SID>fHi("Terminal",     s:cgFG, s:cgBG, s:ctFG, s:ctBG, "NONE")
 call <SID>fHi("Title",        s:cg0C, "",     s:ct0C, "",     "")
-call <SID>fHi("Visual",       "",     s:cg06, "",     s:ct06, "")
-call <SID>fHi("VisualNOS",    "",     s:cg06, "",     s:ct06, "")
+call <SID>fHi("Visual",       "",     s:cg07, "",     s:ct07, "")
+call <SID>fHi("VisualNOS",    "",     s:cg07, "",     s:ct07, "")
 call <SID>fHi("WarningMsg",   "",     s:cg03, "",     s:ct03, "")
 call <SID>fHi("WildMenu",     "",     s:cg06, "",     s:ct06, "")
 

@@ -58,12 +58,16 @@ put_template 14 $color0E
 put_template 15 $colorFG
 
 # 256 color space
-put_template 16 $color01
-put_template 17 $color02
-put_template 18 $color03
-put_template 19 $color04
-put_template 20 $color05
-put_template 21 $color06
+put_template 16 $color00
+put_template 17 $color01
+put_template 18 $color02
+put_template 19 $color03
+put_template 20 $color04
+put_template 21 $color05
+put_template 22 $color06
+put_template 23 $color07
+put_template 24 $color08
+put_template 25 $color0F
 
 # foreground / background / cursor color
 if [ -n "$ITERM_SESSION_ID" ]; then
@@ -71,7 +75,7 @@ if [ -n "$ITERM_SESSION_ID" ]; then
   put_template_custom Pg 424242 # foreground
   put_template_custom Ph 000000 # background
   put_template_custom Pi 424242 # bold color
-  put_template_custom Pj 70c0b1 # selection color
+  put_template_custom Pj 424242 # selection color
   put_template_custom Pk 424242 # selected text color
   put_template_custom Pl 424242 # cursor
   put_template_custom Pm 000000 # cursor text

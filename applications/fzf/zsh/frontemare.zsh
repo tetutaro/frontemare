@@ -27,29 +27,29 @@ export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -100' --preview-window down:
 _gen_fzf_default_opts() {
 
 local colorBG='#000000'
-local colorFG='#d3d5d9'
-local color00='#000000'
+local colorFG='#ced2da'
+local color00='#11141a'
 local color01='#996375'
-local color02='#639999'
+local color02='#639099'
 local color03='#997563'
 local color04='#637599'
-local color05='#756399'
-local color06='#638799'
-local color07='#637599'
-local color08='#8da6d9'
+local color05='#6c6399'
+local color06='#638399'
+local color07='#323b4d'
+local color08='#212733'
 local color09='#d98da6'
-local color0A='#8dd9d9'
+local color0A='#8cccd9'
 local color0B='#d9a68d'
 local color0C='#8da6d9'
-local color0D='#a68dd9'
-local color0E='#8dc0d9'
-local color0F='#d3d5d9'
+local color0D='#9a8dd9'
+local color0E='#8cb9d9'
+local color0F='#91949a'
 
 export FZF_DEFAULT_OPTS="\
     --color=fg:$colorFG,bg:$colorBG,hl:$color0C\
-    --color=fg+:$colorFG,bg+:$color06,gutter:$color00,hl+:$color0C\
+    --color=fg+:$colorFG,bg+:$color07,gutter:$color00,hl+:$color0C\
     --color=prompt:$color0C,pointer:$color0A,marker:$color0A\
-    --color=spinner:$color09,info:$color0B\
+    --color=spinner:$color0B,info:$color0D\
     --tac --cycle --layout=reverse --select-1 --exit-0\
 "
 

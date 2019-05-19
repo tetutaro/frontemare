@@ -147,30 +147,30 @@ def get_default_theme() -> Optional[Theme]:
 
 class Window(object):
     bg_names = [
-        ' BG ',
-        ' 00 ',
-        ' 08 ',
-        ' 07 ',
-        ' 01 ',
-        ' 02 ',
-        ' 03 ',
-        ' 04 ',
-        ' 05 ',
-        ' 06 ',
+        (-1, ' BG '),
+        (16, ' 00 '),
+        (24, ' 08 '),
+        (23, ' 07 '),
+        (17, ' 01 '),
+        (18, ' 02 '),
+        (19, ' 03 '),
+        (20, ' 04 '),
+        (21, ' 05 '),
+        (22, ' 06 '),
     ]
     fg_names = [
-        ' FG ',
-        ' 0F ',
-        ' 09 ',
-        ' 0A ',
-        ' 0B ',
-        ' 0C ',
-        ' 0D ',
-        ' 0E ',
+        (-1, ' FG '),
+        (25, ' 0F '),
+        (1, ' 09 '),
+        (2, ' 0A '),
+        (3, ' 0B '),
+        (4, ' 0C '),
+        (5, ' 0D '),
+        (6, ' 0E '),
     ]
-    num_colors = len(bg_names)
-    scheme_list_columns = 35
-    preview_columns = 35
+    num_colors = len(bg_names) + 1
+    scheme_list_columns = 33
+    preview_columns = 37
     total_columns = scheme_list_columns + preview_columns
 
 
@@ -187,19 +187,20 @@ class PreviewWindow(Window):
         return
 
     def render(self) -> None:
-        for i in range(self.num_colors):
-            if i < 16:
-                curses.init_pair(i, i, -1)
-            else:
-                curses.init_pair(i, -1, i)
-            text = self.color_names[i]
-            attr = curses.color_pair(i)
-            rev_attr = attr + curses.A_REVERSE
-            if 7 < i and i < 16:
-                attr += curses.A_BOLD
-                rev_attr += curses.A_BOLD
-            self.window.addstr(i, len(text), text, rev_attr)
-            self.window.addstr(i, 0, text, attr)
+        curses.init_pair(0, -1, -1)
+        attr = curses.color_pair(0)
+        self.window.addstr(0, 0, 'BGFG', attr)
+        for ci, (fgi, fgt) in enumerate(self.fg_names):
+            self.window.addstr(0, 4 * (ci + 1), fgt, attr)
+        i = 1
+        for ri, (bgi, bgt) in enumerate(self.bg_names):
+            attr = curses.color_pair(0)
+            self.window.addstr(ri + 1, 0, bgt, attr)
+            for ci, (fgi, fgt) in enumerate(self.fg_names):
+                curses.init_pair(i, fgi, bgi)
+                attr = curses.color_pair(i)
+                self.window.addstr(ri + 1, 4 * (ci + 1), ' xx ', attr)
+                i += 1
         self.window.refresh()
         return
 

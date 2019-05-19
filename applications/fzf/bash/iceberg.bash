@@ -47,9 +47,9 @@ local color0F='#c6c8d1'
 
 export FZF_DEFAULT_OPTS="\
     --color=fg:$colorFG,bg:$colorBG,hl:$color0C\
-    --color=fg+:$colorFG,bg+:$color06,gutter:$color00,hl+:$color0C\
+    --color=fg+:$colorFG,bg+:$color07,gutter:$color00,hl+:$color0C\
     --color=prompt:$color0C,pointer:$color0A,marker:$color0A\
-    --color=spinner:$color09,info:$color0B\
+    --color=spinner:$color0B,info:$color0D\
     --tac --cycle --layout=reverse --select-1 --exit-0\
 "
 
