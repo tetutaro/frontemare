@@ -31,33 +31,23 @@ let s:cg0F = "#f3f4f5"
 
 "" TERMINAL color definitions
 let s:ctBG = "00"
-let s:ct00 = "00"
-let s:ct03 = "08"
-let s:ct05 = "07"
-let s:ct07 = "15"
-let s:ct08 = "01"
-let s:ct0A = "03"
-let s:ct0B = "02"
-let s:ct0C = "06"
-let s:ct0D = "04"
-let s:ct0E = "05"
-if &t_Co == 256
-    let s:ct01 = "18"
-    let s:ct02 = "19"
-    let s:ct04 = "20"
-    let s:ct06 = "21"
-    let s:ct09 = "16"
-    let s:ct0F = "17"
-    let s:ctFG = "17"
-else
-    let s:ct01 = "10"
-    let s:ct02 = "11"
-    let s:ct04 = "12"
-    let s:ct06 = "13"
-    let s:ct09 = "09"
-    let s:ct0F = "14"
-    let s:ctFG = "14"
-endif
+let s:ctFG = "15"
+let s:ct00 = "16"
+let s:ct01 = "17"
+let s:ct02 = "18"
+let s:ct03 = "19"
+let s:ct04 = "20"
+let s:ct05 = "21"
+let s:ct06 = "22"
+let s:ct07 = "23"
+let s:ct08 = "24"
+let s:ct09 = "01"
+let s:ct0A = "02"
+let s:ct0B = "03"
+let s:ct0C = "04"
+let s:ct0D = "05"
+let s:ct0E = "06"
+let s:ct0F = "25"
 
 " Neovim terminal colours
 if has("nvim")
@@ -127,7 +117,7 @@ endfunction
 "" default highlighting groups
 call <SID>fHi("ColorColumn",  "",     s:cg08, "",     s:ct08, "")
 call <SID>fHi("Conceal",      s:cg0C, s:cgBG, s:ct0C, s:ctBG, "")
-call <SID>fHi("CusorColumn",  s:cg0A, s:cg07, s:ct0A, s:ct07, "NONE")
+call <SID>fHi("CusorColumn",  "",     s:cg07, "",     s:ct07, "NONE")
 call <SID>fHi("CursorLine",   "",     s:cg07, "",     s:ct07, "NONE")
 call <SID>fHi("Directory",    s:cg0C, "",     s:ct0C, "",     "bold")
 call <SID>fHi("DiffAdd",      s:cgFG, s:cg02, s:ctFG, s:ct02, "NONE")
@@ -230,6 +220,7 @@ call <SID>fHi("GitGutterChange", s:cg0B, s:cg00, s:ct0B, s:ct00, "")
 call <SID>fHi("GitGutterDelete", s:cg09, s:cg00, s:ct09, s:ct00, "")
 call <SID>fHi("GitGutterChangeDelete", s:cg0B, s:cg00, s:ct0B, s:ct00, "")
 call <SID>fHi("ExtraWhitespace", "",  s:cg01, "",     s:ct01, "")
+call <SID>fHi("lspReference", s:cgFG, s:cg04, s:ctFG, s:ct04, "")
 
 let g:rainbow_conf = {
     \ 'guifgs': [s:cg09, s:cg0A, s:cg0B, s:cg0C, s:cg0D, s:cg0E],
