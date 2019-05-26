@@ -11,23 +11,23 @@ let g:colors_name = "frontemare"
 
 "" GUI color definitions
 let s:cgBG = "#000000"
-let s:cgFG = "#ced2da"
+let s:cgFG = "#c3cad9"
 let s:cg00 = "#11141a"
-let s:cg01 = "#996375"
-let s:cg02 = "#639099"
-let s:cg03 = "#997563"
-let s:cg04 = "#637599"
-let s:cg05 = "#6c6399"
-let s:cg06 = "#638399"
+let s:cg01 = "#5a4266"
+let s:cg02 = "#42664e"
+let s:cg03 = "#665a42"
+let s:cg04 = "#4a5873"
+let s:cg05 = "#4a4a73"
+let s:cg06 = "#425a66"
 let s:cg07 = "#323b4d"
 let s:cg08 = "#212733"
-let s:cg09 = "#d98da6"
-let s:cg0A = "#8cccd9"
-let s:cg0B = "#d9a68d"
-let s:cg0C = "#8da6d9"
-let s:cg0D = "#9a8dd9"
-let s:cg0E = "#8cb9d9"
-let s:cg0F = "#91949a"
+let s:cg09 = "#bf8dd8"
+let s:cg0A = "#74b374"
+let s:cg0B = "#cc9c84"
+let s:cg0C = "#95b0e6"
+let s:cg0D = "#9d9df2"
+let s:cg0E = "#7cbfbf"
+let s:cg0F = "#959aa6"
 
 "" TERMINAL color definitions
 let s:ctBG = "00"
@@ -52,41 +52,41 @@ let s:ct0F = "25"
 " Neovim terminal colours
 if has("nvim")
     let g:terminal_color_0 =  "#000000"
-    let g:terminal_color_1 =  "#d98da6"
-    let g:terminal_color_2 =  "#8cccd9"
-    let g:terminal_color_3 =  "#d9a68d"
-    let g:terminal_color_4 =  "#8da6d9"
-    let g:terminal_color_5 =  "#9a8dd9"
-    let g:terminal_color_6 =  "#8cb9d9"
-    let g:terminal_color_7 =  "#ced2da"
+    let g:terminal_color_1 =  "#bf8dd8"
+    let g:terminal_color_2 =  "#74b374"
+    let g:terminal_color_3 =  "#cc9c84"
+    let g:terminal_color_4 =  "#95b0e6"
+    let g:terminal_color_5 =  "#9d9df2"
+    let g:terminal_color_6 =  "#7cbfbf"
+    let g:terminal_color_7 =  "#c3cad9"
     let g:terminal_color_8 =  "#000000"
-    let g:terminal_color_9 =  "#d98da6"
-    let g:terminal_color_10 = "#8cccd9"
-    let g:terminal_color_11 = "#d9a68d"
-    let g:terminal_color_12 = "#8da6d9"
-    let g:terminal_color_13 = "#9a8dd9"
-    let g:terminal_color_14 = "#8cb9d9"
-    let g:terminal_color_15 = "#ced2da"
+    let g:terminal_color_9 =  "#bf8dd8"
+    let g:terminal_color_10 = "#74b374"
+    let g:terminal_color_11 = "#cc9c84"
+    let g:terminal_color_12 = "#95b0e6"
+    let g:terminal_color_13 = "#9d9df2"
+    let g:terminal_color_14 = "#7cbfbf"
+    let g:terminal_color_15 = "#c3cad9"
     let g:terminal_color_background = "#000000"
-    let g:terminal_color_foreground = "#ced2da"
+    let g:terminal_color_foreground = "#c3cad9"
 elseif has('terminal')
     let g:terminal_ansi_colors = [
         \ "#000000",
-        \ "#d98da6",
-        \ "#8cccd9",
-        \ "#d9a68d",
-        \ "#8da6d9",
-        \ "#9a8dd9",
-        \ "#8cb9d9",
-        \ "#ced2da",
+        \ "#bf8dd8",
+        \ "#74b374",
+        \ "#cc9c84",
+        \ "#95b0e6",
+        \ "#9d9df2",
+        \ "#7cbfbf",
+        \ "#c3cad9",
         \ "#000000",
-        \ "#d98da6",
-        \ "#8cccd9",
-        \ "#d9a68d",
-        \ "#8da6d9",
-        \ "#9a8dd9",
-        \ "#8cb9d9",
-        \ "#ced2da",
+        \ "#bf8dd8",
+        \ "#74b374",
+        \ "#cc9c84",
+        \ "#95b0e6",
+        \ "#9d9df2",
+        \ "#7cbfbf",
+        \ "#c3cad9",
     \ ]
 endif
 

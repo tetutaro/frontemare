@@ -14,24 +14,24 @@ You can set any color as you like.
 
 |  name  |  xterm  | fg/bg |  Description                               |
 |:------:|:-------:|:-----:|:-------------------------------------------|
-| basebg |   ----- |   bg  | Default (Darkest) Background               |
-| basefg |   ----- |   fg  | Default Foreground                         |
-| base00 |   black |   bg  | Darker Background (Used for gutter)        |
-| base01 |  maroon |   bg  | Error, Diff Deleted                        |
-| base02 |   green |   bg  | Safety, Diff Inserted                      |
-| base03 |   olive |   bg  | Warning, Diff Changed                      |
-| base04 |    navy |   bg  | Normal                                     |
-| base05 |  purple |   bg  | Menu                                       |
-| base06 |    teal |   bg  | Emphasis (Used for highlighting)           |
-| base07 |  silver |   bg  | Lightest Background (Used for status bar)  |
-| base08 |    grey |   bg  | Lighter Background (Used for inactive)     |
-| base09 |     red |   fg  | Error, Exception                           |
-| base0A |    lime |   fg  | Statement (Conditional, Repeat), Special   |
-| base0B |  yellow |   fg  | Todo                                       |
-| base0C |    blue |   fg  | Identifier(Function), Heading              |
-| base0D | fuchsia |   fg  | Preprocesser (Include, Define), Link       |
-| base0E |    aqua |   fg  | Constant (Number, String)                  |
-| base0F |   white |   fg  | Comments, Invisible                        |
+| baseBG |   black |   bg  | Default (Darkest) Background               |
+| baseBg |   black |   bg  | Darker Background (Used for gutter)        |
+| baseBf |    grey |   bg  | Lighter Background (Used for popup menu)   |
+| baseBF |  silver |   bg  | Lightest Background (Used for status bar)  |
+| baseB1 |  maroon |   bg  | Error, Diff Deleted                        |
+| baseB2 |   green |   bg  | Safety, Diff Inserted                      |
+| baseB3 |   olive |   bg  | Visual Mode, Warning, Diff Changed         |
+| baseB4 |    navy |   bg  | Normal Mode, Highlight                     |
+| baseB5 |  purple |   bg  | Insert Mode, Emphasis                      |
+| baseFG |   white |   fg  | Default Foreground                         |
+| baseFg |   white |   fg  | Comments, Invisible                        |
+| baseF1 |     red |   fg  | Error, Exception                           |
+| baseF2 |  orange |   fg  | Todo                                       |
+| baseF3 |  yellow |   fg  | Emphasis (Used for highlighting)           |
+| baseF4 |    lime |   fg  | Statement (Conditional, Repeat), Special   |
+| baseF5 |    aqua |   fg  | Constant (Number, String)                  |
+| baseF6 |    blue |   fg  | Identifier(Function), Heading              |
+| baseF7 | fuchsia |   fg  | Preprocesser (Include, Define), Link       |
 
 ## Directory & File
 
