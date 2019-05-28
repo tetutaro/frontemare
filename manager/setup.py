@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
     name='frontemare',
-    version='0.1.0',
+    version='0.2.0',
     description='preview frontemare themes in your terminal and setup',
     author='tetutaro',
     author_email='tetsutaro.maruyama@gmail.com',

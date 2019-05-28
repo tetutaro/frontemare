@@ -19,8 +19,8 @@ You can set any color as you like.
 | baseBf |    grey |   bg  | Lighter Background (Used for popup menu)   |
 | baseBF |  silver |   bg  | Lightest Background (Used for status bar)  |
 | baseB1 |  maroon |   bg  | Error, Diff Deleted                        |
-| baseB2 |   green |   bg  | Safety, Diff Inserted                      |
-| baseB3 |   olive |   bg  | Visual Mode, Warning, Diff Changed         |
+| baseB2 |   olive |   bg  | Visual Mode, Warning, Diff Changed         |
+| baseB3 |   green |   bg  | Safety, Diff Inserted                      |
 | baseB4 |    navy |   bg  | Normal Mode, Highlight                     |
 | baseB5 |  purple |   bg  | Insert Mode, Emphasis                      |
 | baseFG |   white |   fg  | Default Foreground                         |

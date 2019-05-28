@@ -6,6 +6,12 @@ import os.path
 import pystache
 import yaml
 
+COLOR_NAMES = [
+    'BG', 'Bg', 'Bf', 'BF', 'FG', 'Fg',
+    'B1', 'B2', 'B3', 'B4', 'B5',
+    'F1', 'F2', 'F3', 'F4', 'F5', 'F6', 'F7',
+]
+
 
 class FrontemareBuilder(object):
     """builder for frontemare"""
@@ -58,13 +64,7 @@ class FrontemareBuilder(object):
         scheme['scheme-slug'] = os.path.splitext(os.path.basename(
             fname
         ))[0].replace(' ', '-')
-        assert(given.get('baseBG'))
-        chex = given.get('baseBG').lower()
-        self._set_scheme_color(scheme, 'BG', chex)
-        assert(given.get('baseFG'))
-        chex = given.get('baseFG').lower()
-        self._set_scheme_color(scheme, 'FG', chex)
-        for c in [format(i, '02X') for i in range(16)]:
+        for c in COLOR_NAMES:
             assert(given.get('base%s' % c))
             chex = given.get('base%s' % c).lower()
             self._set_scheme_color(scheme, c, chex)

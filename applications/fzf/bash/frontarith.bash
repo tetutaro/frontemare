@@ -1,5 +1,5 @@
-# hybrid
-# Author: Andrew Wong (https://github.com/w0ng)
+# frontarith
+# Author: tetutaro
 
 # Setup fzf
 # ---------
@@ -26,30 +26,30 @@ export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -100' --preview-window down:
 
 _gen_fzf_default_opts() {
 
-local colorBG='#1d1f21'
-local colorFG='#c5c8c6'
-local color00='#282a2e'
-local color01='#cc6666'
-local color02='#b5bd68'
-local color03='#f0c674'
-local color04='#81a2be'
-local color05='#b294bb'
-local color06='#8abeb7'
-local color07='#707880'
-local color08='#373b41'
-local color09='#a54242'
-local color0A='#8c9440'
-local color0B='#de935f'
-local color0C='#5f819d'
-local color0D='#85678f'
-local color0E='#5e8d87'
-local color0F='#c5c8c6'
+local colorBG='#000000'
+local colorBg='#11141a'
+local colorBf='#212733'
+local colorBF='#323b4d'
+local colorFG='#b7becc'
+local colorFg='#8a8f99'
+local colorB1='#664542'
+local colorB2='#5c6642'
+local colorB3='#426653'
+local colorB4='#424e66'
+local colorB5='#614266'
+local colorF1='#cb84b0'
+local colorF2='#cc9585'
+local colorF3='#c5cc85'
+local colorF4='#88cc85'
+local colorF5='#85ccbf'
+local colorF6='#849ccb'
+local colorF7='#a984cb'
 
 export FZF_DEFAULT_OPTS="\
-    --color=fg:$colorFG,bg:$colorBG,hl:$color0C\
-    --color=fg+:$colorFG,bg+:$color07,gutter:$color00,hl+:$color0C\
-    --color=prompt:$color0C,pointer:$color0A,marker:$color0A\
-    --color=spinner:$color0B,info:$color0D\
+    --color=fg:$colorFG,bg:$colorBG,hl:$colorF7\
+    --color=fg+:$colorFG,bg+:$colorB4,gutter:$colorBg,hl+:$colorF7\
+    --color=prompt:$colorF6,pointer:$colorF4,marker:$colorF2\
+    --color=spinner:$colorF1,info:$colorF5\
     --tac --cycle --layout=reverse --select-1 --exit-0\
 "
 

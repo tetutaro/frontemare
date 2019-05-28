@@ -27,29 +27,29 @@ export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -100' --preview-window down:
 _gen_fzf_default_opts() {
 
 local colorBG='#{{baseBG-hex}}'
+local colorBg='#{{baseBg-hex}}'
+local colorBf='#{{baseBf-hex}}'
+local colorBF='#{{baseBF-hex}}'
 local colorFG='#{{baseFG-hex}}'
-local color00='#{{base00-hex}}'
-local color01='#{{base01-hex}}'
-local color02='#{{base02-hex}}'
-local color03='#{{base03-hex}}'
-local color04='#{{base04-hex}}'
-local color05='#{{base05-hex}}'
-local color06='#{{base06-hex}}'
-local color07='#{{base07-hex}}'
-local color08='#{{base08-hex}}'
-local color09='#{{base09-hex}}'
-local color0A='#{{base0A-hex}}'
-local color0B='#{{base0B-hex}}'
-local color0C='#{{base0C-hex}}'
-local color0D='#{{base0D-hex}}'
-local color0E='#{{base0E-hex}}'
-local color0F='#{{base0F-hex}}'
+local colorFg='#{{baseFg-hex}}'
+local colorB1='#{{baseB1-hex}}'
+local colorB2='#{{baseB2-hex}}'
+local colorB3='#{{baseB3-hex}}'
+local colorB4='#{{baseB4-hex}}'
+local colorB5='#{{baseB5-hex}}'
+local colorF1='#{{baseF1-hex}}'
+local colorF2='#{{baseF2-hex}}'
+local colorF3='#{{baseF3-hex}}'
+local colorF4='#{{baseF4-hex}}'
+local colorF5='#{{baseF5-hex}}'
+local colorF6='#{{baseF6-hex}}'
+local colorF7='#{{baseF7-hex}}'
 
 export FZF_DEFAULT_OPTS="\
-    --color=fg:$colorFG,bg:$colorBG,hl:$color0C\
-    --color=fg+:$colorFG,bg+:$color07,gutter:$color00,hl+:$color0C\
-    --color=prompt:$color0C,pointer:$color0A,marker:$color0A\
-    --color=spinner:$color0B,info:$color0D\
+    --color=fg:$colorFG,bg:$colorBG,hl:$colorF7\
+    --color=fg+:$colorFG,bg+:$colorB4,gutter:$colorBg,hl+:$colorF7\
+    --color=prompt:$colorF6,pointer:$colorF4,marker:$colorF2\
+    --color=spinner:$colorF1,info:$colorF5\
     --tac --cycle --layout=reverse --select-1 --exit-0\
 "
 

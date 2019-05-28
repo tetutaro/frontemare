@@ -1,5 +1,5 @@
 " vi:syntax=vim
-"" {{scheme-name}} scheme by {{scheme-author}}
+"" frontarith scheme by tetutaro
 
 "" setup theme
 hi clear
@@ -7,27 +7,27 @@ if exists('syntac_on')
     syntax reset
 endif
 syntax reset
-let g:colors_name = "{{scheme-slug}}"
+let g:colors_name = "frontarith"
 
 "" GUI color definitions
-let s:cgBG = "#{{baseBG-hex}}"
-let s:cgBg = "#{{baseBg-hex}}"
-let s:cgBf = "#{{baseBf-hex}}"
-let s:cgBF = "#{{baseBF-hex}}"
-let s:cgFG = "#{{baseFG-hex}}"
-let s:cgFg = "#{{baseFg-hex}}"
-let s:cgB1 = "#{{baseB1-hex}}"
-let s:cgB2 = "#{{baseB2-hex}}"
-let s:cgB3 = "#{{baseB3-hex}}"
-let s:cgB4 = "#{{baseB4-hex}}"
-let s:cgB5 = "#{{baseB5-hex}}"
-let s:cgF1 = "#{{baseF1-hex}}"
-let s:cgF2 = "#{{baseF2-hex}}"
-let s:cgF3 = "#{{baseF3-hex}}"
-let s:cgF4 = "#{{baseF4-hex}}"
-let s:cgF5 = "#{{baseF5-hex}}"
-let s:cgF6 = "#{{baseF6-hex}}"
-let s:cgF7 = "#{{baseF7-hex}}"
+let s:cgBG = "#000000"
+let s:cgBg = "#11141a"
+let s:cgBf = "#212733"
+let s:cgBF = "#323b4d"
+let s:cgFG = "#b7becc"
+let s:cgFg = "#8a8f99"
+let s:cgB1 = "#664542"
+let s:cgB2 = "#5c6642"
+let s:cgB3 = "#426653"
+let s:cgB4 = "#424e66"
+let s:cgB5 = "#614266"
+let s:cgF1 = "#cb84b0"
+let s:cgF2 = "#cc9585"
+let s:cgF3 = "#c5cc85"
+let s:cgF4 = "#88cc85"
+let s:cgF5 = "#85ccbf"
+let s:cgF6 = "#849ccb"
+let s:cgF7 = "#a984cb"
 
 "" TERMINAL color definitions
 let s:ctBG = "00"
@@ -51,42 +51,42 @@ let s:ctF7 = "05"
 
 " Neovim terminal colours
 if has("nvim")
-    let g:terminal_color_0 =  "#{{baseBG-hex}}"
-    let g:terminal_color_1 =  "#{{baseF1-hex}}"
-    let g:terminal_color_2 =  "#{{baseF4-hex}}"
-    let g:terminal_color_3 =  "#{{baseF3-hex}}"
-    let g:terminal_color_4 =  "#{{baseF6-hex}}"
-    let g:terminal_color_5 =  "#{{baseF7-hex}}"
-    let g:terminal_color_6 =  "#{{baseF5-hex}}"
-    let g:terminal_color_7 =  "#{{baseFG-hex}}"
-    let g:terminal_color_8 =  "#{{baseBG-hex}}"
-    let g:terminal_color_9 =  "#{{baseF1-hex}}"
-    let g:terminal_color_10 = "#{{baseF4-hex}}"
-    let g:terminal_color_11 = "#{{baseF3-hex}}"
-    let g:terminal_color_12 = "#{{baseF6-hex}}"
-    let g:terminal_color_13 = "#{{baseF7-hex}}"
-    let g:terminal_color_14 = "#{{baseF5-hex}}"
-    let g:terminal_color_15 = "#{{baseFG-hex}}"
-    let g:terminal_color_background = "#{{baseBG-hex}}"
-    let g:terminal_color_foreground = "#{{baseFG-hex}}"
+    let g:terminal_color_0 =  "#000000"
+    let g:terminal_color_1 =  "#cb84b0"
+    let g:terminal_color_2 =  "#88cc85"
+    let g:terminal_color_3 =  "#c5cc85"
+    let g:terminal_color_4 =  "#849ccb"
+    let g:terminal_color_5 =  "#a984cb"
+    let g:terminal_color_6 =  "#85ccbf"
+    let g:terminal_color_7 =  "#b7becc"
+    let g:terminal_color_8 =  "#000000"
+    let g:terminal_color_9 =  "#cb84b0"
+    let g:terminal_color_10 = "#88cc85"
+    let g:terminal_color_11 = "#c5cc85"
+    let g:terminal_color_12 = "#849ccb"
+    let g:terminal_color_13 = "#a984cb"
+    let g:terminal_color_14 = "#85ccbf"
+    let g:terminal_color_15 = "#b7becc"
+    let g:terminal_color_background = "#000000"
+    let g:terminal_color_foreground = "#b7becc"
 elseif has('terminal')
     let g:terminal_ansi_colors = [
-        \ "#{{baseBG-hex}}",
-        \ "#{{baseF1-hex}}",
-        \ "#{{baseF4-hex}}",
-        \ "#{{baseF3-hex}}",
-        \ "#{{baseF6-hex}}",
-        \ "#{{baseF7-hex}}",
-        \ "#{{baseF5-hex}}",
-        \ "#{{baseFG-hex}}",
-        \ "#{{baseBG-hex}}",
-        \ "#{{baseF1-hex}}",
-        \ "#{{baseF4-hex}}",
-        \ "#{{baseF3-hex}}",
-        \ "#{{baseF6-hex}}",
-        \ "#{{baseF7-hex}}",
-        \ "#{{baseF5-hex}}",
-        \ "#{{baseFG-hex}}",
+        \ "#000000",
+        \ "#cb84b0",
+        \ "#88cc85",
+        \ "#c5cc85",
+        \ "#849ccb",
+        \ "#a984cb",
+        \ "#85ccbf",
+        \ "#b7becc",
+        \ "#000000",
+        \ "#cb84b0",
+        \ "#88cc85",
+        \ "#c5cc85",
+        \ "#849ccb",
+        \ "#a984cb",
+        \ "#85ccbf",
+        \ "#b7becc",
     \ ]
 endif
 

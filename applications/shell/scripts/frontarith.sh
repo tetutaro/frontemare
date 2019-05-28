@@ -1,22 +1,22 @@
 
-colorBG="1d/1f/21"
-colorFG="c5/c8/c6"
-color00="28/2a/2e"
-color01="cc/66/66"
-color02="b5/bd/68"
-color03="f0/c6/74"
-color04="81/a2/be"
-color05="b2/94/bb"
-color06="8a/be/b7"
-color07="70/78/80"
-color08="37/3b/41"
-color09="a5/42/42"
-color0A="8c/94/40"
-color0B="de/93/5f"
-color0C="5f/81/9d"
-color0D="85/67/8f"
-color0E="5e/8d/87"
-color0F="c5/c8/c6"
+colorBG="00/00/00"
+colorBg="11/14/1a"
+colorBf="21/27/33"
+colorBF="32/3b/4d"
+colorFG="b7/be/cc"
+colorFg="8a/8f/99"
+colorB1="66/45/42"
+colorB2="5c/66/42"
+colorB3="42/66/53"
+colorB4="42/4e/66"
+colorB5="61/42/66"
+colorF1="cb/84/b0"
+colorF2="cc/95/85"
+colorF3="c5/cc/85"
+colorF4="88/cc/85"
+colorF5="85/cc/bf"
+colorF6="84/9c/cb"
+colorF7="a9/84/cb"
 
 if [ -n "$TMUX" ]; then
   # Tell tmux to pass the escape sequences through
@@ -41,49 +41,49 @@ fi
 
 # 16 color space
 put_template 0  $colorBG
-put_template 1  $color09
-put_template 2  $color0A
-put_template 3  $color0B
-put_template 4  $color0C
-put_template 5  $color0D
-put_template 6  $color0E
+put_template 1  $colorF1
+put_template 2  $colorF4
+put_template 3  $colorF3
+put_template 4  $colorF6
+put_template 5  $colorF7
+put_template 6  $colorF5
 put_template 7  $colorFG
 put_template 8  $colorBG
-put_template 9  $color09
-put_template 10 $color0A
-put_template 11 $color0B
-put_template 12 $color0C
-put_template 13 $color0D
-put_template 14 $color0E
+put_template 9  $colorF1
+put_template 10 $colorF4
+put_template 11 $colorF3
+put_template 12 $colorF6
+put_template 13 $colorF7
+put_template 14 $colorF5
 put_template 15 $colorFG
 
 # 256 color space
-put_template 16 $color00
-put_template 17 $color01
-put_template 18 $color02
-put_template 19 $color03
-put_template 20 $color04
-put_template 21 $color05
-put_template 22 $color06
-put_template 23 $color07
-put_template 24 $color08
-put_template 25 $color0F
+put_template 16 $colorBg
+put_template 17 $colorBf
+put_template 18 $colorBF
+put_template 19 $colorFg
+put_template 20 $colorB1
+put_template 21 $colorB2
+put_template 22 $colorB3
+put_template 23 $colorB4
+put_template 24 $colorB5
+put_template 25 $colorF2
 
 # foreground / background / cursor color
 if [ -n "$ITERM_SESSION_ID" ]; then
   # iTerm2 proprietary escape codes
-  put_template_custom Pg c5c8c6 # foreground
-  put_template_custom Ph 1d1f21 # background
-  put_template_custom Pi c5c8c6 # bold color
-  put_template_custom Pj 707880 # selection color
-  put_template_custom Pk c5c8c6 # selected text color
-  put_template_custom Pl c5c8c6 # cursor
-  put_template_custom Pm 1d1f21 # cursor text
+  put_template_custom Pg b7becc # foreground
+  put_template_custom Ph 000000 # background
+  put_template_custom Pi b7becc # bold color
+  put_template_custom Pj 424e66 # selection color
+  put_template_custom Pk b7becc # selected text color
+  put_template_custom Pl b7becc # cursor
+  put_template_custom Pm 000000 # cursor text
 else
   put_template_var 10 $colorFG # foreground
   put_template_var 11 $colorBG # background
   if [ "${TERM%%-*}" = "rxvt" ]; then
-    put_template_var 708 $color00 # internal border (rxvt)
+    put_template_var 708 $colorBf # internal border (rxvt)
   fi
   put_template_custom 12 ";7" # cursor (reverse video)
 fi
@@ -93,19 +93,20 @@ unset -f put_template
 unset -f put_template_var
 unset -f put_template_custom
 unset colorBG
+unset colorBg
+unset colorBf
+unset colorBF
 unset colorFG
-unset color01
-unset color02
-unset color03
-unset color04
-unset color05
-unset color06
-unset color07
-unset color08
-unset color09
-unset color0A
-unset color0B
-unset color0C
-unset color0D
-unset color0E
-unset color0F
+unset colorFg
+unset colorB1
+unset colorB2
+unset colorB3
+unset colorB4
+unset colorB5
+unset colorF1
+unset colorF2
+unset colorF3
+unset colorF4
+unset colorF5
+unset colorF6
+unset colorF7

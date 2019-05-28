@@ -1,5 +1,5 @@
-# ashes
-# Author: Jannik Siebert (https://github.com/janniks)
+# frontarith
+# Author: tetutaro
 
 # Setup fzf
 # ---------
@@ -26,30 +26,30 @@ export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -100' --preview-window down:
 
 _gen_fzf_default_opts() {
 
-local colorBG='#1c2023'
-local colorFG='#c7ccd1'
-local color00='#1c2023'
-local color01='#9e768a'
-local color02='#8a9e76'
-local color03='#9e8a76'
-local color04='#768a9e'
-local color05='#8a769e'
-local color06='#769e8a'
-local color07='#c7ccd1'
-local color08='#747c84'
-local color09='#c795ae'
-local color0A='#aec795'
-local color0B='#c7ae95'
-local color0C='#95aec7'
-local color0D='#ae95c7'
-local color0E='#95c7ae'
-local color0F='#f3f4f5'
+local colorBG='#000000'
+local colorBg='#11141a'
+local colorBf='#212733'
+local colorBF='#323b4d'
+local colorFG='#b7becc'
+local colorFg='#8a8f99'
+local colorB1='#664542'
+local colorB2='#5c6642'
+local colorB3='#426653'
+local colorB4='#424e66'
+local colorB5='#614266'
+local colorF1='#cb84b0'
+local colorF2='#cc9585'
+local colorF3='#c5cc85'
+local colorF4='#88cc85'
+local colorF5='#85ccbf'
+local colorF6='#849ccb'
+local colorF7='#a984cb'
 
 export FZF_DEFAULT_OPTS="\
-    --color=fg:$colorFG,bg:$colorBG,hl:$color0C\
-    --color=fg+:$colorFG,bg+:$color07,gutter:$color00,hl+:$color0C\
-    --color=prompt:$color0C,pointer:$color0A,marker:$color0A\
-    --color=spinner:$color0B,info:$color0D\
+    --color=fg:$colorFG,bg:$colorBG,hl:$colorF7\
+    --color=fg+:$colorFG,bg+:$colorB4,gutter:$colorBg,hl+:$colorF7\
+    --color=prompt:$colorF6,pointer:$colorF4,marker:$colorF2\
+    --color=spinner:$colorF1,info:$colorF5\
     --tac --cycle --layout=reverse --select-1 --exit-0\
 "
 

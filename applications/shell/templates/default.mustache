@@ -1,22 +1,22 @@
 
 colorBG="{{baseBG-hex-r}}/{{baseBG-hex-g}}/{{baseBG-hex-b}}"
+colorBg="{{baseBg-hex-r}}/{{baseBg-hex-g}}/{{baseBg-hex-b}}"
+colorBf="{{baseBf-hex-r}}/{{baseBf-hex-g}}/{{baseBf-hex-b}}"
+colorBF="{{baseBF-hex-r}}/{{baseBF-hex-g}}/{{baseBF-hex-b}}"
 colorFG="{{baseFG-hex-r}}/{{baseFG-hex-g}}/{{baseFG-hex-b}}"
-color00="{{base00-hex-r}}/{{base00-hex-g}}/{{base00-hex-b}}"
-color01="{{base01-hex-r}}/{{base01-hex-g}}/{{base01-hex-b}}"
-color02="{{base02-hex-r}}/{{base02-hex-g}}/{{base02-hex-b}}"
-color03="{{base03-hex-r}}/{{base03-hex-g}}/{{base03-hex-b}}"
-color04="{{base04-hex-r}}/{{base04-hex-g}}/{{base04-hex-b}}"
-color05="{{base05-hex-r}}/{{base05-hex-g}}/{{base05-hex-b}}"
-color06="{{base06-hex-r}}/{{base06-hex-g}}/{{base06-hex-b}}"
-color07="{{base07-hex-r}}/{{base07-hex-g}}/{{base07-hex-b}}"
-color08="{{base08-hex-r}}/{{base08-hex-g}}/{{base08-hex-b}}"
-color09="{{base09-hex-r}}/{{base09-hex-g}}/{{base09-hex-b}}"
-color0A="{{base0A-hex-r}}/{{base0A-hex-g}}/{{base0A-hex-b}}"
-color0B="{{base0B-hex-r}}/{{base0B-hex-g}}/{{base0B-hex-b}}"
-color0C="{{base0C-hex-r}}/{{base0C-hex-g}}/{{base0C-hex-b}}"
-color0D="{{base0D-hex-r}}/{{base0D-hex-g}}/{{base0D-hex-b}}"
-color0E="{{base0E-hex-r}}/{{base0E-hex-g}}/{{base0E-hex-b}}"
-color0F="{{base0F-hex-r}}/{{base0F-hex-g}}/{{base0F-hex-b}}"
+colorFg="{{baseFg-hex-r}}/{{baseFg-hex-g}}/{{baseFg-hex-b}}"
+colorB1="{{baseB1-hex-r}}/{{baseB1-hex-g}}/{{baseB1-hex-b}}"
+colorB2="{{baseB2-hex-r}}/{{baseB2-hex-g}}/{{baseB2-hex-b}}"
+colorB3="{{baseB3-hex-r}}/{{baseB3-hex-g}}/{{baseB3-hex-b}}"
+colorB4="{{baseB4-hex-r}}/{{baseB4-hex-g}}/{{baseB4-hex-b}}"
+colorB5="{{baseB5-hex-r}}/{{baseB5-hex-g}}/{{baseB5-hex-b}}"
+colorF1="{{baseF1-hex-r}}/{{baseF1-hex-g}}/{{baseF1-hex-b}}"
+colorF2="{{baseF2-hex-r}}/{{baseF2-hex-g}}/{{baseF2-hex-b}}"
+colorF3="{{baseF3-hex-r}}/{{baseF3-hex-g}}/{{baseF3-hex-b}}"
+colorF4="{{baseF4-hex-r}}/{{baseF4-hex-g}}/{{baseF4-hex-b}}"
+colorF5="{{baseF5-hex-r}}/{{baseF5-hex-g}}/{{baseF5-hex-b}}"
+colorF6="{{baseF6-hex-r}}/{{baseF6-hex-g}}/{{baseF6-hex-b}}"
+colorF7="{{baseF7-hex-r}}/{{baseF7-hex-g}}/{{baseF7-hex-b}}"
 
 if [ -n "$TMUX" ]; then
   # Tell tmux to pass the escape sequences through
@@ -41,33 +41,33 @@ fi
 
 # 16 color space
 put_template 0  $colorBG
-put_template 1  $color09
-put_template 2  $color0A
-put_template 3  $color0B
-put_template 4  $color0C
-put_template 5  $color0D
-put_template 6  $color0E
+put_template 1  $colorF1
+put_template 2  $colorF4
+put_template 3  $colorF3
+put_template 4  $colorF6
+put_template 5  $colorF7
+put_template 6  $colorF5
 put_template 7  $colorFG
 put_template 8  $colorBG
-put_template 9  $color09
-put_template 10 $color0A
-put_template 11 $color0B
-put_template 12 $color0C
-put_template 13 $color0D
-put_template 14 $color0E
+put_template 9  $colorF1
+put_template 10 $colorF4
+put_template 11 $colorF3
+put_template 12 $colorF6
+put_template 13 $colorF7
+put_template 14 $colorF5
 put_template 15 $colorFG
 
 # 256 color space
-put_template 16 $color00
-put_template 17 $color01
-put_template 18 $color02
-put_template 19 $color03
-put_template 20 $color04
-put_template 21 $color05
-put_template 22 $color06
-put_template 23 $color07
-put_template 24 $color08
-put_template 25 $color0F
+put_template 16 $colorBg
+put_template 17 $colorBf
+put_template 18 $colorBF
+put_template 19 $colorFg
+put_template 20 $colorB1
+put_template 21 $colorB2
+put_template 22 $colorB3
+put_template 23 $colorB4
+put_template 24 $colorB5
+put_template 25 $colorF2
 
 # foreground / background / cursor color
 if [ -n "$ITERM_SESSION_ID" ]; then
@@ -75,7 +75,7 @@ if [ -n "$ITERM_SESSION_ID" ]; then
   put_template_custom Pg {{baseFG-hex}} # foreground
   put_template_custom Ph {{baseBG-hex}} # background
   put_template_custom Pi {{baseFG-hex}} # bold color
-  put_template_custom Pj {{base07-hex}} # selection color
+  put_template_custom Pj {{baseB4-hex}} # selection color
   put_template_custom Pk {{baseFG-hex}} # selected text color
   put_template_custom Pl {{baseFG-hex}} # cursor
   put_template_custom Pm {{baseBG-hex}} # cursor text
@@ -83,7 +83,7 @@ else
   put_template_var 10 $colorFG # foreground
   put_template_var 11 $colorBG # background
   if [ "${TERM%%-*}" = "rxvt" ]; then
-    put_template_var 708 $color00 # internal border (rxvt)
+    put_template_var 708 $colorBf # internal border (rxvt)
   fi
   put_template_custom 12 ";7" # cursor (reverse video)
 fi
@@ -93,19 +93,20 @@ unset -f put_template
 unset -f put_template_var
 unset -f put_template_custom
 unset colorBG
+unset colorBg
+unset colorBf
+unset colorBF
 unset colorFG
-unset color01
-unset color02
-unset color03
-unset color04
-unset color05
-unset color06
-unset color07
-unset color08
-unset color09
-unset color0A
-unset color0B
-unset color0C
-unset color0D
-unset color0E
-unset color0F
+unset colorFg
+unset colorB1
+unset colorB2
+unset colorB3
+unset colorB4
+unset colorB5
+unset colorF1
+unset colorF2
+unset colorF3
+unset colorF4
+unset colorF5
+unset colorF6
+unset colorF7
